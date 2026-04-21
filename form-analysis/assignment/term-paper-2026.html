@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Term Paper 2026 — Form &amp; Analysis II</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf8f3;
+    --surface: #ffffff;
+    --ink: #1a1a1a;
+    --ink-soft: #4a4a4a;
+    --ink-mute: #8a8a8a;
+    --line: #e6e0d4;
+    --accent: #8b1e3f;
+    --accent-soft: #f5e8ec;
+    --highlight: #fff8d6;
+    --urgent: #c9272f;
+    --urgent-soft: #fde8e9;
+    --max: 1000px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Sarabun', sans-serif;
+    font-size: 19px;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  em, .italic { font-family: 'Sarabun', sans-serif; font-style: italic; font-weight: 500; }
+
+  main {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 3rem 3.5rem 5rem;
+    background: var(--surface);
+    border-left: 1px solid var(--line);
+    border-right: 1px solid var(--line);
+    min-height: 100vh;
+  }
+
+  /* Masthead */
+  header.masthead {
+    padding-bottom: 2.5rem;
+    margin-bottom: 3rem;
+    border-bottom: 3px double var(--accent);
+  }
+  header.masthead .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+  header.masthead h1 {
+    font-size: 2.6rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0 0 0.6rem;
+    color: var(--ink);
+  }
+  header.masthead .subtitle {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+    margin-bottom: 1.8rem;
+  }
+  header.masthead .meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem 2rem;
+    font-size: 0.92rem;
+    color: var(--ink-mute);
+    border-top: 1px solid var(--line);
+    padding-top: 1.3rem;
+  }
+  header.masthead .meta span strong {
+    display: block;
+    color: var(--ink);
+    font-weight: 600;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.15rem;
+  }
+
+  /* Deadline banner */
+  .deadline {
+    margin: 0 0 2.5rem;
+    padding: 1.5rem 1.8rem;
+    background: var(--urgent-soft);
+    border: 2px solid var(--urgent);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .deadline .icon {
+    font-size: 2.4rem;
+    line-height: 1;
+  }
+  .deadline .text {
+    flex: 1;
+  }
+  .deadline .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--urgent);
+    margin-bottom: 0.25rem;
+  }
+  .deadline .date {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .deadline .date span { color: var(--urgent); }
+
+  /* Sections */
+  section {
+    margin: 3rem 0;
+    scroll-margin-top: 1rem;
+  }
+  h2 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 3rem 0 1rem;
+    line-height: 1.3;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    align-items: baseline;
+    gap: 0.8rem;
+  }
+  h2 .num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--ink-mute);
+    letter-spacing: 0.05em;
+  }
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 1.8rem 0 0.6rem;
+  }
+  h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 1.2rem 0 0.4rem;
+    text-transform: none;
+  }
+
+  p { margin: 0.7rem 0; }
+  strong { font-weight: 600; color: var(--ink); }
+
+  ul, ol { padding-left: 1.4rem; margin: 0.7rem 0; }
+  li { margin: 0.3rem 0; }
+  ul li::marker { color: var(--accent); }
+
+  /* Spec cards grid */
+  .spec-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  .spec-card {
+    padding: 1.2rem 1.3rem;
+    background: #fdfcf8;
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--accent);
+    border-radius: 4px;
+  }
+  .spec-card .spec-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-mute);
+    margin-bottom: 0.4rem;
+  }
+  .spec-card .spec-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+  .spec-card .spec-note {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    margin-top: 0.3rem;
+  }
+
+  /* Section structure cards */
+  .structure-list {
+    counter-reset: stepcounter;
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+  }
+  .structure-list > li {
+    counter-increment: stepcounter;
+    position: relative;
+    padding: 1.2rem 1.3rem 1.2rem 3.8rem;
+    margin: 0.8rem 0;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 4px 4px 0;
+  }
+  .structure-list > li::before {
+    content: counter(stepcounter, decimal-leading-zero);
+    position: absolute;
+    left: 1.1rem;
+    top: 1.1rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+  }
+  .structure-list .step-title {
+    font-size: 1.08rem;
+    font-weight: 600;
+    color: var(--ink);
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+  .structure-list .step-desc {
+    font-size: 0.94rem;
+    color: var(--ink-soft);
+    line-height: 1.65;
+  }
+  .structure-list ul {
+    margin-top: 0.5rem;
+    font-size: 0.92rem;
+  }
+
+  /* Callouts */
+  .callout {
+    margin: 1.5rem 0;
+    padding: 1.2rem 1.4rem;
+    background: var(--accent-soft);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 4px 4px 0;
+  }
+  .callout h4 {
+    margin-top: 0;
+    color: var(--accent);
+    font-size: 0.88rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .callout.warning {
+    background: var(--highlight);
+    border-left-color: #c9a227;
+  }
+  .callout.warning h4 { color: #8a6d0f; }
+
+  /* Rubric table */
+  .table-wrap { overflow-x: auto; margin: 1.2rem 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.93rem;
+  }
+  table th, table td {
+    padding: 0.7rem 0.9rem;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+    vertical-align: top;
+  }
+  table th {
+    background: var(--accent);
+    color: white;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+  }
+  table tr:nth-child(even) td { background: #fbf8f3; }
+  table td.num, table th.num {
+    text-align: right;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+  }
+  table tr.total td {
+    background: var(--accent-soft) !important;
+    font-weight: 600;
+    border-top: 2px solid var(--accent);
+  }
+
+  /* Checklist */
+  .checklist {
+    margin: 1.5rem 0;
+    padding: 1.3rem 1.5rem;
+    background: #f5f1e8;
+    border-radius: 6px;
+    border: 1px dashed var(--ink-mute);
+  }
+  .checklist h4 {
+    margin: 0 0 0.8rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink);
+  }
+  .checklist ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .checklist li {
+    position: relative;
+    padding-left: 1.8rem;
+    margin: 0.4rem 0;
+    font-size: 0.95rem;
+  }
+  .checklist li::before {
+    content: "☐";
+    position: absolute;
+    left: 0;
+    top: -0.1rem;
+    font-size: 1.2rem;
+    color: var(--accent);
+  }
+
+  /* Ornament */
+  .ornament {
+    text-align: center;
+    margin: 2.5rem 0;
+    color: var(--accent);
+    font-size: 1.1rem;
+    letter-spacing: 1rem;
+  }
+
+  /* Footer */
+  footer.colophon {
+    margin-top: 4rem;
+    padding-top: 1.8rem;
+    border-top: 3px double var(--accent);
+    font-size: 0.85rem;
+    color: var(--ink-mute);
+    line-height: 1.7;
+  }
+
+  /* Mobile */
+  @media (max-width: 720px) {
+    main { padding: 2rem 1.3rem 3rem; }
+    header.masthead h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.3rem; flex-wrap: wrap; }
+    .deadline { flex-direction: column; align-items: flex-start; gap: 0.8rem; }
+  }
+
+  /* Submit button */
+  .submit-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin: 1.5rem 0 0.5rem;
+    padding: 1.4rem 1.6rem;
+    background: var(--accent);
+    border-radius: 6px;
+    box-shadow: 0 4px 14px rgba(139, 30, 63, 0.18);
+    flex-wrap: wrap;
+  }
+  .submit-cta .cta-text {
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+  .submit-cta .cta-text small {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.05em;
+    opacity: 0.78;
+    margin-top: 0.25rem;
+    text-transform: uppercase;
+  }
+  .submit-cta a.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    background: #fff;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.75rem 1.4rem;
+    border-radius: 4px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    white-space: nowrap;
+  }
+  .submit-cta a.btn:hover,
+  .submit-cta a.btn:focus-visible {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+    outline: none;
+  }
+  .submit-cta a.btn::after { content: "→"; font-weight: 400; }
+  @media (max-width: 600px) {
+    .submit-cta { flex-direction: column; align-items: stretch; }
+    .submit-cta a.btn { justify-content: center; }
+  }
+
+  /* Print */
+  @media print {
+    body { background: white; font-size: 11pt; }
+    main { border: none; padding: 0; max-width: none; }
+    .deadline { break-inside: avoid; }
+    section { break-inside: avoid; }
+    h2 { break-after: avoid; }
+    .structure-list > li { break-inside: avoid; }
+    a { color: inherit; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+
+<main>
+
+<p style="font-family:'JetBrains Mono',monospace;font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;margin:0 0 1.5rem;"><a href="../../index.html" style="color:var(--accent);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px;">&larr; Back to Portfolio</a></p>
+
+<!-- ============ MASTHEAD ============ -->
+<header class="masthead">
+  <div class="eyebrow">Undergraduate Music · Term Paper Assignment</div>
+  <h1>งานส่งท้ายภาค<br><span style="color:var(--accent);">Form &amp; Analysis II</span></h1>
+  <div class="subtitle">การวิเคราะห์บทประพันธ์ดนตรี — รายงานฉบับเต็ม</div>
+  <div class="meta">
+    <span><strong>รายวิชา</strong>Form &amp; Analysis II</span>
+    <span><strong>ประเภทงาน</strong>Term Paper (รายงานวิเคราะห์)</span>
+    <span><strong>ภาษา</strong>ไทย (ภาษาเชิงวิชาการ)</span>
+    <span><strong>รูปแบบส่ง</strong>PDF + ไฟล์ต้นฉบับ</span>
+  </div>
+</header>
+
+<!-- ============ DEADLINE ============ -->
+<div class="deadline">
+  <div class="icon">⏰</div>
+  <div class="text">
+    <div class="label">กำหนดส่ง · Deadline</div>
+    <div class="date"><span>วันอังคารที่ 28 เมษายน 2026</span> ภายในเวลา 23:59 น.</div>
+  </div>
+</div>
+
+<!-- ============ OVERVIEW ============ -->
+<section id="overview">
+  <h2><span class="num">01</span>ภาพรวมของงาน</h2>
+  <p>นิสิตเลือก<strong>บทประพันธ์</strong> ที่ได้ปรึกษากับอาจารย์ผู้รับผิดชอบรายวิชา เพื่อนำมาวิเคราะห์ในเชิงลึกตามหลักการของวิชา Form &amp; Analysis II โดยผลงานต้องประกอบด้วย <strong>การวิเคราะห์เชิงโครงสร้าง</strong> (formal analysis) ร่วมกับ <strong>การวิเคราะห์รายละเอียดทางดนตรี</strong> (harmonic, melodic, motivic) และปิดท้ายด้วยข้อคิดเห็นเชิงวิชาการของนิสิตเอง</p>
+
+  <p>เป้าหมายของงานไม่ใช่เพียงการ "อธิบาย" บทเพลง แต่เป็นการ <strong>ค้นหาแบบแผนและเอกลักษณ์</strong> ของงานนั้นๆ ผ่านเครื่องมือการวิเคราะห์ที่ได้เรียนมาตลอดคอร์ส พร้อมเชื่อมโยงกับบทความวิชาการเพื่อเสริมมุมมองและสร้างข้อถกเถียง</p>
+</section>
+
+<!-- ============ SPECS ============ -->
+<section id="specs">
+  <h2><span class="num">02</span>ข้อกำหนดด้านรูปแบบเอกสาร</h2>
+
+  <div class="spec-grid">
+    <div class="spec-card">
+      <div class="spec-label">Font</div>
+      <div class="spec-value">Sarabun</div>
+      <div class="spec-note">ใช้ตลอดทั้งเอกสาร</div>
+    </div>
+    <div class="spec-card">
+      <div class="spec-label">Font Size</div>
+      <div class="spec-value">16 pt</div>
+      <div class="spec-note">เนื้อหาหลัก</div>
+    </div>
+    <div class="spec-card">
+      <div class="spec-label">ความยาว</div>
+      <div class="spec-value">12 – 15 หน้า</div>
+      <div class="spec-note">ไม่นับปกหน้า/ปกหลัง</div>
+    </div>
+    <div class="spec-card">
+      <div class="spec-label">ปก</div>
+      <div class="spec-value">ประมาณ 2 หน้า</div>
+      <div class="spec-note">ปกหน้า + ปกหลัง</div>
+    </div>
+  </div>
+
+  <div class="callout warning">
+    <h4>ข้อควรระวัง</h4>
+    <ul>
+      <li><strong>ความยาวต่ำกว่า 12 หน้า</strong> หรือ <strong>เกิน 15 หน้า</strong> (ไม่รวมปก) จะถูกหักคะแนน</li>
+      <li>ใช้ระยะบรรทัด (line spacing) <strong>2.0</strong> และขอบกระดาษมาตรฐาน (2.54 ซม. / 1 นิ้ว) ทุกด้าน</li>
+      <li>หัวข้อและหัวข้อย่อยใช้ฟอนต์ Sarabun เช่นเดียวกัน ปรับน้ำหนัก (bold) และขนาดแทน</li>
+      <li>ศัพท์เทคนิคทางดนตรี (เช่น <em>sonata form, cadence, dominant, motive</em>) <strong>คงภาษาอังกฤษ</strong> เพื่อความถูกต้อง</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ CONTENT STRUCTURE ============ -->
+<section id="structure">
+  <h2><span class="num">03</span>โครงสร้างของรายงาน</h2>
+  <p>รายงานต้องประกอบด้วย 5 ส่วนหลักตามลำดับต่อไปนี้ ทุกส่วนต้องมี <strong>หลักฐานทางดนตรีประกอบ</strong> (อ้างอิงห้อง, โน้ต, หรือ score excerpt) และ <strong>อ้างอิงบทความวิชาการ</strong> ในจุดที่เหมาะสม</p>
+
+  <ol class="structure-list">
+    <li>
+      <span class="step-title">ประวัติผู้ประพันธ์ (Composer's Biography) โดยย่อ</span>
+      <div class="step-desc">สรุปประวัติโดยย่อของผู้ประพันธ์ เน้นช่วงชีวิตและอิทธิพลที่เกี่ยวข้องกับบทเพลงที่วิเคราะห์ — ไม่ใช่ประวัติทั่วไปแบบ Wikipedia แต่เลือกเฉพาะประเด็นที่ <strong>ส่งผลต่อสไตล์หรือแนวคิด</strong> ของงานชิ้นนี้โดยตรง</div>
+    </li>
+    <li>
+      <span class="step-title">ภูมิหลังทางประวัติศาสตร์ของบทเพลง (Historical Background)</span>
+      <div class="step-desc">ปีแต่ง, โอกาสที่แต่ง, บริบททางประวัติศาสตร์และสไตล์ของยุค, ตำแหน่งของบทเพลงในผลงานรวมของผู้ประพันธ์ และอิทธิพลจากผู้ประพันธ์ท่านอื่นหรือเหตุการณ์สำคัญ</div>
+    </li>
+    <li>
+      <span class="step-title">การระบุรูปแบบของบทเพลง (Identification of Form Type)</span>
+      <div class="step-desc">ระบุประเภทของ <em>form</em> อย่างชัดเจน (เช่น sonata form, rondo, ternary, theme and variations ฯลฯ) พร้อม <strong>อธิบายเหตุผล</strong> ว่าทำไมจึงจัดเป็น form นี้ — อาศัยหลักฐานจากโครงสร้าง harmonic และ thematic</div>
+    </li>
+    <li>
+      <span class="step-title">แผนภูมิโครงสร้างของบทเพลง (Formal Diagram)</span>
+      <div class="step-desc">แสดง <strong>diagram</strong> ของโครงสร้างทั้งบทเพลงในรูปแบบภาพ (table, flowchart, หรือ timeline) ระบุ:
+        <ul>
+          <li>ชื่อ section และขอบเขตห้อง (measure numbers)</li>
+          <li>Key หลักของแต่ละ section</li>
+          <li>Theme หรือ motivic materials ที่ปรากฏ</li>
+          <li>จุด cadence สำคัญ</li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <span class="step-title">การวิเคราะห์รายละเอียดทางดนตรี (Detailed Music Analysis)</span>
+      <div class="step-desc">ส่วนยาวที่สุดและสำคัญที่สุดของรายงาน ต้องครอบคลุม:
+        <ul>
+          <li><strong>Keys &amp; Tonal Plan</strong> — การเดินทางของ tonality, modulation สำคัญ</li>
+          <li><strong>Sections</strong> — วิเคราะห์หน้าที่และความสัมพันธ์ระหว่าง section</li>
+          <li><strong>Phrases</strong> — การแบ่ง phrase, ประเภท (antecedent/consequent, period, sentence)</li>
+          <li><strong>Cadences</strong> — ประเภทและตำแหน่ง (PAC, IAC, HC, deceptive ฯลฯ)</li>
+          <li><strong>Chords &amp; Harmony</strong> — progression สำคัญ, chord ที่น่าสนใจ, non-chord tones</li>
+          <li><strong>Compositional Techniques</strong> — เช่น counterpoint, imitation, pedal point, hemiola</li>
+          <li><strong>Sequences</strong> — ประเภท (tonal / real / modulating) และหน้าที่</li>
+          <li><strong>Motives &amp; Their Development</strong> — germinal motive, การ transform, การ return</li>
+        </ul>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- ============ ACADEMIC SOURCES ============ -->
+<section id="sources">
+  <h2><span class="num">04</span>บทความวิชาการประกอบ</h2>
+  <p>รายงานต้องอ้างอิง <strong>บทความวิชาการอย่างน้อย 3 ชิ้น</strong> ที่เกี่ยวข้องกับบทเพลง ผู้ประพันธ์ หรือประเภทของ form ที่วิเคราะห์ โดยอาจเป็น:</p>
+  <ul>
+    <li>บทความจากวารสารวิชาการ (<em>peer-reviewed journals</em>) เช่น <em>Jstor, Scopus, ฯลฯ</em></li>
+    <li>บทในหนังสือวิชาการ (<em>book chapters</em>)</li>
+    <li>วิทยานิพนธ์ระดับบัณฑิตศึกษา (<em>theses / dissertations</em>)</li>
+    <li>Program notes ที่เขียนโดยนักวิชาการที่มีชื่อเสียง</li>
+  </ul>
+
+  <div class="callout">
+    <h4>รูปแบบการอ้างอิง</h4>
+    <p>ใช้รูปแบบ <strong>Chicago Manual of Style (Notes-Bibliography)</strong> หรือ <strong>APA 7th Edition</strong> อย่างสม่ำเสมอทั้งเอกสาร พร้อมแนบรายการบรรณานุกรม (Bibliography) ในหน้าสุดท้าย</p>
+  </div>
+
+  <div class="callout warning">
+    <h4>ข้อห้าม</h4>
+    <ul>
+      <li><strong>ห้ามใช้ Wikipedia</strong> เป็นแหล่งอ้างอิงหลัก (ใช้ได้เฉพาะเป็นจุดตั้งต้นเพื่อค้นหาแหล่งวิชาการอื่น)</li>
+      <li><strong>ห้ามคัดลอกข้อความ</strong> จากแหล่งใดโดยไม่อ้างอิง — การคัดลอกโดยไม่อ้าง = ทุจริตทางวิชาการ</li>
+      <li><strong>ห้ามใช้ AI-generated analysis</strong> เป็นเนื้อหาหลัก (ใช้ได้เป็นเครื่องมือช่วย แต่การวิเคราะห์ต้องมาจากนิสิตเอง)</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ SUMMARY SECTION ============ -->
+<section id="summary">
+  <h2><span class="num">05</span>บทสรุปและทัศนะส่วนตัว</h2>
+  <p>ส่วนปิดท้ายของรายงานต้องเป็น <strong>บทสรุปพร้อมทัศนะเชิงวิชาการ</strong> ของนิสิตเอง ที่สะท้อนความเข้าใจที่ได้จากการวิเคราะห์</p>
+
+  <h3>ต้องประกอบด้วยประเด็นต่อไปนี้</h3>
+  <ol>
+    <li><strong>ความน่าสนใจของบทเพลง</strong> — จุดไหนของบทเพลงที่ทำให้ <em>unique</em> หรือ <em>memorable</em>? อะไรทำให้บทเพลงนี้ต่างจากงานอื่นในสไตล์เดียวกัน?</li>
+    <li><strong>ความรู้ทางดนตรีที่ได้รับ</strong> — การวิเคราะห์ครั้งนี้ทำให้เข้าใจเทคนิคหรือแนวคิดใดลึกขึ้น? ได้เห็นความเชื่อมโยงกับเนื้อหาที่เรียนมาในคอร์สอย่างไร?</li>
+    <li><strong>การโต้แย้งเชิงวิชาการ (optional but encouraged)</strong> — หากพบว่ามุมมองของบทความที่อ้างอิง <em>ขัดแย้งกับข้อสังเกตของคุณ</em> สามารถนำเสนอข้อโต้แย้งได้ <strong>แต่ต้องมีหลักฐานทางดนตรีรองรับ</strong> (อ้างอิงห้อง, โน้ต, หรือ progression ที่ชัดเจน)</li>
+  </ol>
+
+  <div class="callout warning">
+    <h4>ข้อควรเลี่ยง</h4>
+    <ul>
+      <li><strong>เลี่ยงการพูดเชิงนามธรรมหรือปรัชญา</strong> เช่น "บทเพลงนี้สวยงามมาก" หรือ "ถ่ายทอดจิตวิญญาณของผู้ประพันธ์" โดยไม่มีหลักฐานรองรับ</li>
+      <li>แทนที่ด้วย <strong>ข้อสังเกตเชิงดนตรีที่เป็นรูปธรรม</strong> เช่น "การใช้ diminished seventh chord ที่ห้องที่ 45 สร้างความรู้สึกตึงเครียดก่อนการ resolve ไปสู่ tonic ในห้องถัดไป"</li>
+    </ul>
+  </div>
+</section>
+
+<div class="ornament">· · ·</div>
+
+<!-- ============ GRADING ============ -->
+<section id="rubric">
+  <h2><span class="num">06</span>เกณฑ์การให้คะแนน</h2>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>หัวข้อ</th>
+          <th>รายละเอียด</th>
+          <th class="num">คะแนน</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>ประวัติ &amp; ภูมิหลัง</strong></td>
+          <td>คุณภาพของการคัดกรองข้อมูล, ความเกี่ยวข้องกับบทเพลง</td>
+          <td class="num">10</td>
+        </tr>
+        <tr>
+          <td><strong>การระบุ Form</strong></td>
+          <td>ความถูกต้องและการให้เหตุผลทางดนตรี</td>
+          <td class="num">10</td>
+        </tr>
+        <tr>
+          <td><strong>Formal Diagram</strong></td>
+          <td>ความชัดเจน, ครบถ้วน, อ่านเข้าใจง่าย</td>
+          <td class="num">15</td>
+        </tr>
+        <tr>
+          <td><strong>Detailed Analysis</strong></td>
+          <td>ความลึก, ความถูกต้อง, การใช้ศัพท์เทคนิคเหมาะสม</td>
+          <td class="num">35</td>
+        </tr>
+        <tr>
+          <td><strong>บทสรุป &amp; ทัศนะ</strong></td>
+          <td>ความเป็นต้นฉบับ, การสนับสนุนด้วยหลักฐาน</td>
+          <td class="num">15</td>
+        </tr>
+        <tr>
+          <td><strong>อ้างอิง &amp; รูปแบบ</strong></td>
+          <td>คุณภาพแหล่งข้อมูล, ความสม่ำเสมอของ citation, รูปแบบเอกสาร</td>
+          <td class="num">10</td>
+        </tr>
+        <tr>
+          <td><strong>ภาษา &amp; การนำเสนอ</strong></td>
+          <td>ความลื่นไหล, การจัดหน้า, การใช้ภาพประกอบ</td>
+          <td class="num">5</td>
+        </tr>
+        <tr class="total">
+          <td colspan="2"><strong>รวม</strong></td>
+          <td class="num">100</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ SUBMISSION ============ -->
+<section id="submission">
+  <h2><span class="num">07</span>การส่งงาน</h2>
+  <ul>
+    <li><strong>ไฟล์หลัก:</strong> PDF (ตั้งชื่อไฟล์ตามรูปแบบ <code>FormAnalysis2_ชื่อ_รหัสนิสิต.pdf</code>)</li>
+    <li><strong>ไฟล์ต้นฉบับ:</strong> .docx หรือ .pages (สำหรับตรวจสอบในกรณีจำเป็น)</li>
+    <li><strong>ช่องทาง:</strong> ส่งผ่านแบบฟอร์ม Google Form (ลิงก์ด้านล่าง)</li>
+    <li><strong>กำหนดส่ง:</strong> <span style="color:var(--urgent); font-weight:600;">28 เมษายน 2026 เวลา 23:59 น.</span></li>
+  </ul>
+
+  <div class="submit-cta">
+    <div class="cta-text">
+      ส่งงานผ่านแบบฟอร์มออนไลน์
+      <small>Submit via Google Form</small>
+    </div>
+    <a class="btn" href="https://forms.gle/SxqKgCurmvhrWSak6" target="_blank" rel="noopener">ส่งงาน · Submit Paper</a>
+  </div>
+
+  <div class="callout">
+    <h4>งานส่งล่าช้า</h4>
+    <p>ส่งล่าช้า <strong>ภายใน 24 ชม.</strong> หัก 10% · <strong>24–48 ชม.</strong> หัก 25% · <strong>เกิน 48 ชม.</strong> ไม่รับพิจารณา ยกเว้นมีเหตุอันสมควรแจ้งล่วงหน้าและได้รับอนุมัติจากผู้สอน</p>
+  </div>
+</section>
+
+<!-- ============ CHECKLIST ============ -->
+<section id="checklist">
+  <h2><span class="num">08</span>Checklist ก่อนส่ง</h2>
+
+  <div class="checklist">
+    <h4>ก่อนกดส่ง ตรวจสอบให้ครบทุกข้อ</h4>
+    <ul>
+      <li>ปกหน้า + ปกหลัง จัดรูปแบบครบถ้วน</li>
+      <li>ฟอนต์ Sarabun ขนาด 16 ทั้งเอกสาร</li>
+      <li>ความยาวเนื้อหา 12–15 หน้า (ไม่รวมปก)</li>
+      <li>มีทั้ง 5 ส่วนเนื้อหา: ประวัติ / ภูมิหลัง / Form / Diagram / Analysis</li>
+      <li>Formal diagram มองเห็นชัด อ่านง่าย</li>
+      <li>Detailed analysis ครอบคลุม 8 ประเด็น (keys / sections / phrases / cadences / chords / techniques / sequences / motives)</li>
+      <li>มีบทสรุปและทัศนะส่วนตัว พร้อมหลักฐานสนับสนุน</li>
+      <li>อ้างอิงบทความวิชาการอย่างน้อย 3 ชิ้น</li>
+      <li>รูปแบบ citation สม่ำเสมอทั้งเอกสาร</li>
+      <li>รายการบรรณานุกรม (Bibliography) อยู่ท้ายเล่ม</li>
+      <li>ตรวจคำผิดและไวยากรณ์เรียบร้อย</li>
+      <li>ตั้งชื่อไฟล์ตามรูปแบบที่กำหนด</li>
+      <li>แปลงเป็น PDF แล้ว (เปิดตรวจในเครื่องอื่นก่อนส่ง)</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ TIPS ============ -->
+<section id="tips">
+  <h2><span class="num">09</span>ข้อแนะนำ</h2>
+  <h3>เริ่มต้นจากโน้ต ไม่ใช่จากบทความ</h3>
+  <p>อ่านและฟังบทเพลงก่อนเพื่อสร้างความเข้าใจเบื้องต้นของตนเอง <strong>หลังจากนั้น</strong> จึงไปอ่านบทความวิชาการ — เพื่อหลีกเลี่ยงการถูกครอบด้วยทัศนะของผู้อื่น และเพื่อให้การวิเคราะห์เป็นของคุณจริงๆ</p>
+
+  <h3>คัดลอกธีม (The Copyist)</h3>
+  <p>เทคนิคที่พูดถึงใน <em>Postlude</em> ของตำรา: การคัดลอก theme ด้วยมือ 2–4 ห้อง ช่วยให้สังเกตรายละเอียดที่มักมองข้ามตอนแค่อ่าน ลองทำกับธีมหลักของบทเพลงก่อนเริ่มเขียน</p>
+
+  <h3>ใช้ภาพประกอบอย่างมีประสิทธิภาพ</h3>
+  <p>Score excerpts, diagram, และ harmonic reduction ช่วยให้ผู้อ่านเห็นสิ่งที่คุณกำลังวิเคราะห์ — ไม่ต้องใช้เยอะ แต่ต้อง <strong>สื่อสารชัด</strong></p>
+
+  <h3>เริ่มต้นแต่เนิ่น</h3>
+  <p>การวิเคราะห์ที่ดีต้องใช้เวลา — เริ่มทำวันนี้ และทำให้เสร็จก่อน <strong>deadline</strong> เพื่อมีเวลาทบทวน ปรับแก้ และเช็ค citation</p>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="colophon">
+  <p><strong>ติดต่อผู้สอน:</strong> หากมีข้อสงสัยเกี่ยวกับงาน โปรดติดต่อผ่านช่องทางของรายวิชา หรือนัดปรึกษาในช่วง office hours</p>
+  <p style="margin-top:1rem; font-size:0.78rem;">Form &amp; Analysis II · Term Paper Assignment · Academic Year 2025–2026</p>
+</footer>
+
+</main>
+
+</body>
+</html>
