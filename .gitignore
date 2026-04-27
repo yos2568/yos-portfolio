@@ -1,5 +1,5 @@
+# macOS
 .DS_Store
-Thumbs.db
-*.log
-.vscode/
-.idea/
+
+# Unpacked artifact source (regenerable via _tools/unpack.mjs)
+tofu/_src/
