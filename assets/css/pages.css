@@ -16,15 +16,45 @@
   position: absolute;
   inset: 0;
   z-index: 0;
+  background: var(--color-void);
 }
 
-.hero__media img {
+.hero__media img,
+.hero__media video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 58% 18%;
-  opacity: 0.55;
-  transform: scale(1.04);
+  object-position: center 30%;
+  opacity: 0.58;
+  transform: scale(1.02);
+}
+
+.hero__video {
+  position: absolute;
+  inset: 0;
+}
+
+.hero__poster {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Hide static poster once video can play (progressive enhancement) */
+.hero__media.has-video .hero__poster {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--dur-med) var(--ease-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__video {
+    display: none;
+  }
+
+  .hero__media.has-video .hero__poster {
+    opacity: 0.58;
+  }
 }
 
 .hero__veil {
@@ -79,13 +109,33 @@
   opacity: 0.8;
 }
 
-.hero h1 {
-  max-width: 12ch;
+.hero h1,
+.hero__title {
+  max-width: none;
 }
 
 .hero h1 em {
   font-style: italic;
   color: var(--color-amber);
+}
+
+/* Keep full name on one line (EN + TH) */
+.hero__title {
+  white-space: nowrap;
+}
+
+html[lang="th"] .hero__title {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.15;
+  font-size: clamp(2rem, 1.1rem + 5.5vw, 5.75rem);
+}
+
+@media (max-width: 380px) {
+  .hero__title {
+    white-space: normal;
+  }
 }
 
 .hero__roles {

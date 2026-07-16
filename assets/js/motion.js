@@ -52,10 +52,45 @@
     });
   }
 
+  function initHeroVideo() {
+    const media = document.querySelector(".hero__media");
+    const video = document.querySelector(".hero__video");
+    if (!media || !video) return;
+
+    if (prefersReduced()) {
+      video.removeAttribute("autoplay");
+      video.pause();
+      return;
+    }
+
+    const markReady = () => media.classList.add("has-video");
+
+    video.addEventListener("loadeddata", markReady, { once: true });
+    video.addEventListener("playing", markReady, { once: true });
+
+    // Ensure autoplay after user gesture / browser policy edge cases
+    const tryPlay = () => {
+      const p = video.play();
+      if (p && typeof p.catch === "function") {
+        p.catch(() => {
+          /* keep poster if autoplay blocked */
+        });
+      }
+    };
+
+    if (video.readyState >= 2) {
+      markReady();
+      tryPlay();
+    } else {
+      video.addEventListener("canplay", tryPlay, { once: true });
+    }
+  }
+
   function init() {
     document.documentElement.classList.add("js-enabled");
     initReveals();
     initSpotlight();
+    initHeroVideo();
   }
 
   if (document.readyState === "loading") {

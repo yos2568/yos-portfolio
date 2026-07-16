@@ -34,7 +34,7 @@
   <link rel="stylesheet" href="assets/css/components.css" />
   <link rel="stylesheet" href="assets/css/pages.css" />
 
-  <link rel="preload" as="image" href="images/yos-3.jpg" fetchpriority="high" />
+  <link rel="preload" as="image" href="assets/video/hero-poster.jpg" fetchpriority="high" />
 </head>
 <body>
   <a class="skip-link" href="#main" data-en="Skip to content" data-th="ข้ามไปยังเนื้อหา">Skip to content</a>
@@ -90,11 +90,25 @@
     <!-- HERO -->
     <section class="hero spotlight-surface" id="top" aria-label="Introduction">
       <div class="hero__media" aria-hidden="true">
+        <video
+          class="hero__video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="assets/video/hero-poster.jpg"
+          disablepictureinpicture
+          disableremoteplayback
+        >
+          <source src="assets/video/hero.mp4" type="video/mp4" />
+        </video>
         <img
-          src="images/yos-3.jpg"
+          class="hero__poster"
+          src="assets/video/hero-poster.jpg"
           alt=""
-          width="1782"
-          height="2688"
+          width="1280"
+          height="852"
           fetchpriority="high"
           decoding="async"
         />
@@ -110,8 +124,8 @@
           <span data-en="Bangkok · TH" data-th="กรุงเทพฯ · ไทย">Bangkok · TH</span>
         </div>
 
-        <h1 class="display-hero">
-          <span data-en="Dr. Yos <em>Vaneesorn</em>" data-th="ดร. ยศ <em>วณีสอน</em>">Dr. Yos <em>Vaneesorn</em></span>
+        <h1 class="display-hero hero__title">
+          <span data-en="Dr. Yos <em>Vaneesorn</em>" data-th="ดร.ยศ วณีสอน">Dr. Yos <em>Vaneesorn</em></span>
         </h1>
 
         <ul class="hero__roles" aria-label="Roles">
