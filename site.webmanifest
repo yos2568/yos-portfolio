@@ -1,0 +1,18 @@
+{
+  "name": "Dr. Yos Vaneesorn",
+  "short_name": "Yos",
+  "description": "Composer · Clarinetist · Educator · Researcher",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0908",
+  "theme_color": "#0a0908",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

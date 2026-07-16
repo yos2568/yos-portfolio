@@ -1,0 +1,99 @@
+/* Design tokens — cinematic composer portfolio */
+:root {
+  /* Color — light editorial */
+  --color-ivory: #f4efe6;
+  --color-parchment: #ebe4d6;
+  --color-ink: #1a1410;
+  --color-ink-soft: #3d342c;
+  --color-muted: #7a6f63;
+  --color-rule: rgba(26, 20, 16, 0.12);
+
+  /* Color — cinematic dark */
+  --color-void: #0a0908;
+  --color-charcoal: #141110;
+  --color-smoke: #1e1a17;
+  --color-fog: #cfc5b8;
+  --color-cream-soft: #e8dfd0;
+
+  /* Accents */
+  --color-burgundy: #6b2430;
+  --color-burgundy-bright: #8f3040;
+  --color-amber: #c4a574;
+  --color-amber-dim: rgba(196, 165, 116, 0.35);
+
+  /* Semantic */
+  --bg: var(--color-ivory);
+  --bg-elevated: #faf7f1;
+  --fg: var(--color-ink);
+  --fg-muted: var(--color-muted);
+  --accent: var(--color-burgundy);
+  --accent-soft: var(--color-amber);
+
+  /* Typography */
+  --font-display: "Cormorant Garamond", "Instrument Serif", "Times New Roman", serif;
+  --font-serif: "EB Garamond", "Libre Caslon Text", Georgia, serif;
+  --font-sans: "Sarabun", "Helvetica Neue", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --fs-xs: clamp(0.7rem, 0.65rem + 0.2vw, 0.78rem);
+  --fs-sm: clamp(0.85rem, 0.8rem + 0.25vw, 0.95rem);
+  --fs-base: clamp(1rem, 0.95rem + 0.3vw, 1.125rem);
+  --fs-md: clamp(1.15rem, 1.05rem + 0.4vw, 1.35rem);
+  --fs-lg: clamp(1.5rem, 1.2rem + 1.2vw, 2.25rem);
+  --fs-xl: clamp(2.25rem, 1.4rem + 3vw, 4rem);
+  --fs-2xl: clamp(3rem, 1.8rem + 5vw, 6.5rem);
+  --fs-hero: clamp(3.25rem, 2rem + 7vw, 8.5rem);
+
+  --lh-tight: 1.05;
+  --lh-snug: 1.25;
+  --lh-body: 1.7;
+  --tracking-meta: 0.14em;
+  --tracking-wide: 0.08em;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 6.5rem;
+  --space-10: 9rem;
+
+  --section-y: clamp(4.5rem, 8vw, 8rem);
+  --gutter: clamp(1.25rem, 4vw, 3.5rem);
+  --content-max: 72rem;
+  --narrow-max: 40rem;
+  --wide-max: 90rem;
+
+  /* Borders & elevation */
+  --radius-sm: 2px;
+  --radius-md: 6px;
+  --radius-lg: 12px;
+  --border: 1px solid var(--color-rule);
+  --border-dark: 1px solid rgba(232, 223, 208, 0.12);
+  --shadow-soft: 0 20px 60px rgba(10, 9, 8, 0.18);
+  --shadow-lift: 0 8px 30px rgba(10, 9, 8, 0.12);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 180ms;
+  --dur-med: 420ms;
+  --dur-slow: 900ms;
+
+  /* Nav */
+  --nav-h: 4.25rem;
+  --focus-ring: 2px solid var(--color-burgundy-bright);
+  --focus-offset: 3px;
+}
+
+[data-theme="dark"] {
+  --bg: var(--color-void);
+  --bg-elevated: var(--color-charcoal);
+  --fg: var(--color-cream-soft);
+  --fg-muted: var(--color-fog);
+  --color-rule: rgba(232, 223, 208, 0.12);
+}
