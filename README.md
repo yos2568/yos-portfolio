@@ -44,7 +44,7 @@ Content is marked with `data-en` / `data-th` on elements. Core content works wit
 1. Production backup tag: `production-backup-2026-07-17` (commit `7e3c304`)
 2. Do **not** merge `redesign-v2` to `main` without explicit approval
 3. Do not change DNS / VPS routing unless approved
-4. Contact email on the page is a **placeholder** until confirmed
+4. Public contact: `yos.v@chula.ac.th` · YouTube [@vaneesorn](https://www.youtube.com/@vaneesorn)
 
 ## Rollback
 

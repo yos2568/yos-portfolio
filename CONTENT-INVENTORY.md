@@ -23,12 +23,20 @@ Status: **real content preserved from production `7e3c304`**. No professional cl
 | Images | `images/yos-1.jpg` … `yos-4.jpg` |
 | Tofu | Private page preserved at `/tofu/` |
 
-## Placeholder / needs user confirmation
+## Confirmed contact (user 2026-07-17)
+
+| Item | Value |
+|------|--------|
+| Public email | `yos.v@chula.ac.th` |
+| Studio (TH) | ภาควิชาดุริยางค์ตะวันตก คณะศิลปกรรมศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย |
+| Studio (EN) | Department of Western Music, Faculty of Fine and Applied Arts, Chulalongkorn University |
+| YouTube | [Yos Vaneesorn](https://www.youtube.com/@vaneesorn) |
+
+## Still needs user confirmation
 
 | Item | Current | Action needed |
 |------|---------|----------------|
-| Public email | `yos.vaneesorn@example.ac.th` | Supply real address or remove |
-| YouTube / SoundCloud / ResearchGate | Labels only, no URLs | Confirm profile URLs |
+| SoundCloud / ResearchGate | Not listed | Add if desired |
 | Featured compositions list | Not listed by title | Supply works to feature |
 | Image credits / rights | Captions only | Confirm public use + credits |
 | USA in stages list | Present in original | Confirm if intentional |
