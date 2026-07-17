@@ -1,5 +1,4 @@
-User-agent: *
+User-Agent: *
 Allow: /
 
-Sitemap: https://yos.in.th/sitemap.xml
 Sitemap: https://yos.in.th/clarinethology/sitemap.xml
