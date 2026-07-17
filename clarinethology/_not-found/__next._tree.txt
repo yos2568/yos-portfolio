@@ -1,2 +1,2 @@
-:HL["/clarinethology/_next/static/chunks/1vwb57elj6t1g.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"H9ywUgl3EUs1SKdy14-RH"}
+:HL["/clarinethology/_next/static/chunks/0t-1qad5vo5gb.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"HS6kDCN_8-Z8GQnBS44pK"}
