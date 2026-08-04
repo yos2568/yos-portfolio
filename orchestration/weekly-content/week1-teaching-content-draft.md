@@ -474,8 +474,10 @@ Adler, *The Study of Orchestration*, 3rd ed., Part Two, Chapter 15, Example 15-1
 
 ## แหล่งอ้างอิงที่ใช้ในสัปดาห์นี้
 
-- Samuel Adler, *The Study of Orchestration*, 3rd ed., Part One, Chapter 1: “The Orchestra—Yesterday and Today”.
-- Norman Ludwin, *Music for the Movies: The Hollywood Sound* (v.2), §§1.1 “Work Flow and Process” และ 1.2 “Writing an Outline”.
-- Thomas Goss, *100 Orchestration Tips* (2nd ed.), Q10 “Orchestration vs Arranging”.
-- Thomas Goss, *100 More Orchestration Tips*, Q9 “Is it better to orchestrate as you compose or after you compose?”.
-- Elaine Gould, *Behind Bars*, Part 1 “General Conventions” → “Ground Rules”.
+- [Samuel Adler, *The Study of Orchestration*, 3rd ed., Part One, Chapter 1: “The Orchestra—Yesterday and Today” — ดาวน์โหลดจาก Google Drive](https://drive.google.com/uc?export=download&id=1UkwoLeAuGnKid6x7U_Vl81p6GG2ah7uR)
+- [Norman Ludwin, *Music for the Movies: The Hollywood Sound* (v.2), §§1.1 “Work Flow and Process” และ 1.2 “Writing an Outline” — ดาวน์โหลดจาก Google Drive](https://drive.google.com/uc?export=download&id=1PGVgBctVoYuWf5Z-r0-L3hXWEKlvEu2E)
+- [Thomas Goss, *100 Orchestration Tips* (2nd ed.), Q10 “Orchestration vs Arranging” — ดาวน์โหลดจาก Google Drive](https://drive.google.com/uc?export=download&id=1dPGTdipA3ZFJ1BCPVI_diF91xHWuIoTw)
+- [Thomas Goss, *100 More Orchestration Tips*, Q9 “Is it better to orchestrate as you compose or after you compose?” — ดาวน์โหลดจาก Google Drive](https://drive.google.com/uc?export=download&id=1Bdc1QicbUsZTIBt3jQpSNZktC7ROf7Qp)
+- [Elaine Gould, *Behind Bars*, Part 1 “General Conventions” → “Ground Rules” — ดาวน์โหลดจาก Google Drive](https://drive.google.com/uc?export=download&id=1cEoqp1FP9-FUhD2gVISNaLrY2EZAI5rK)
+
+ลิงก์ด้านบนเป็นลิงก์ดาวน์โหลดโดยตรงสำหรับผู้เรียน หากเบราว์เซอร์แสดงหน้าตัวอย่างของ Google Drive ให้กดปุ่ม **ดาวน์โหลด** เพื่อบันทึกไฟล์ไว้สำหรับอ่านประกอบการเรียน
