@@ -1096,6 +1096,34 @@ button.module-card {
   font-size: 11px;
   color: var(--text-muted);
 }
+
+.lesson-resource-links {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line-dark);
+}
+.lesson-resource-label {
+  margin: 0 0 12px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.lesson-resource-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.lesson-resource-link {
+  color: var(--champagne);
+  border-color: var(--line-dark);
+  text-decoration: none;
+}
+.lesson-resource-link:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
 .lesson-viewer-body {
   flex: 1;
   overflow: auto;
