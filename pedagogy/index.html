@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wind Pedagogy · 3503394 · Yos Vaneesorn</title>
+  <meta name="description" content="Wind Pedagogy (3503394) — 15-week teaching content for wind instrument pedagogy at Chulalongkorn University." />
+  <link rel="canonical" href="https://yos.in.th/pedagogy/" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@100;200;300;400;500&family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/site.css" />
+  <link rel="stylesheet" href="assets/static-overrides.css" />
+</head>
+<body>
+  <div class="site-shell" id="app">
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
+    <header class="topbar" id="topbar">
+      <a class="brand" href="../" aria-label="Back to yos.in.th">
+        <span class="brand-mark">Y</span>
+        <span class="brand-text">yos.in.th</span>
+      </a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+        <span class="visually-hidden">Menu</span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+      <nav id="primary-nav" class="topbar-links" aria-label="Primary">
+        <span class="nav-term hide-sm" id="nav-term">3503394</span>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#modules">Modules</a>
+        <a class="nav-link" href="#works">15 weeks</a>
+        <button type="button" class="nav-link nav-link-cta" data-open-week="1">Start week 1</button>
+        <a class="nav-link" href="../">Portfolio</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <canvas class="hero-cooling" id="hero-cooling" aria-hidden="true"></canvas>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow" id="hero-eyebrow">WIND PEDAGOGY · Section 1</p>
+            <h1 id="hero-title">สอนให้ผู้เรียน<br /><em>ได้ยิน</em><br />และเติบโต</h1>
+            <p class="hero-lede" id="hero-lede"></p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#works">เปิดแผน 15 สัปดาห์ <span aria-hidden="true">↓</span></a>
+              <button type="button" class="button button-ghost" data-open-week="1">เริ่มสัปดาห์ที่ 1</button>
+            </div>
+          </div>
+          <div class="hero-aside" aria-hidden="true">
+            <div class="hero-chip hero-chip-date">
+              <span class="chip-label">15 weeks</span>
+              <strong id="chip-span"></strong>
+            </div>
+            <div class="hero-chip hero-chip-main">
+              <span class="chip-label">course thread</span>
+              <strong id="chip-thread"></strong>
+              <span id="chip-faculty"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <p class="section-kicker">01 / About</p>
+        <div class="section-heading">
+          <h2>หลักการที่เดินทาง<br /><span>ไปพร้อมกัน</span></h2>
+          <p>รายวิชานี้เริ่มจากการมองครูเป็นผู้ออกแบบการเรียนรู้ แล้วพาผู้เรียนไปสู่การฟัง การฝึก การให้ข้อมูลป้อนกลับ การสอนเดี่ยว การสอนกลุ่ม และการสอนเฉพาะเครื่อง</p>
+        </div>
+        <div class="principle-list">
+          <div><span class="num">01</span><strong>ผู้เรียนมาก่อน</strong><small>สังเกตความต้องการก่อนเลือกวิธีสอน</small></div>
+          <div><span class="num">02</span><strong>เสียงมาก่อนสัญลักษณ์</strong><small>ฟังและทำดนตรีก่อนเชื่อมไปสู่โน้ต</small></div>
+          <div><span class="num">03</span><strong>หลักฐานนำการตัดสินใจ</strong><small>ทดลอง ปรับ และสะท้อนจากสิ่งที่เกิดขึ้นจริง</small></div>
+        </div>
+      </section>
+
+      <section class="section" id="modules">
+        <p class="section-kicker">02 / Modules</p>
+        <div class="section-heading">
+          <h2>Our path<br /><span>สามช่วงของรายวิชา</span></h2>
+          <p>Foundation · Specialist · Capstone</p>
+        </div>
+        <div class="module-grid" id="module-grid"></div>
+      </section>
+
+      <section class="section" id="works">
+        <p class="section-kicker">03 / Selected weeks</p>
+        <div class="section-heading">
+          <h2>15 สัปดาห์<br /><span>selected works</span></h2>
+          <p>กดทั้งแถวเพื่อเปิดบทเรียน</p>
+        </div>
+        <div class="works-tools">
+          <div class="filter-pills" role="group" aria-label="Filter weeks" id="filters"></div>
+          <label class="search-box">
+            <span class="visually-hidden">Search</span>
+            <span aria-hidden="true">⌕</span>
+            <input id="search" type="search" placeholder="ค้นหาหัวข้อ แหล่งอ่าน หรือ card" />
+          </label>
+        </div>
+        <ul class="work-list" id="work-list"></ul>
+        <div class="empty-state" id="empty" hidden>ไม่พบสัปดาห์ที่ตรงกับคำค้นนี้</div>
+      </section>
+
+      <section class="cta-band">
+        <div class="cta-inner">
+          <div>
+            <p class="eyebrow" id="cta-eyebrow"></p>
+            <h2>Listen.<br />Design.<br /><em>Teach.</em></h2>
+          </div>
+          <div class="cta-right">
+            <p id="cta-meta"></p>
+            <button type="button" class="nav-link-cta" data-open-week="1">ไปสัปดาห์ 1 →</button>
+            <a href="#top">กลับด้านบน ↑</a>
+            <a href="../">← Portfolio</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="lesson-root"></div>
+  </div>
+
+  <script src="assets/site.js" type="module"></script>
+</body>
+</html>

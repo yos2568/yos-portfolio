@@ -1,0 +1,411 @@
+{
+  "courseMeta": {
+    "code": "3503394",
+    "name": "WIND PEDAGOGY",
+    "section": "Section 1",
+    "term": "2026/1",
+    "faculty": "คณะศิลปกรรมศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย",
+    "subtitle": "จากหลักการสอน สู่การออกแบบบทเรียนเครื่องลมที่ตอบสนองผู้เรียน",
+    "note": "เนื้อหาประจำสัปดาห์จาก Weeklycontent vault · กำหนดการยึด MyCourseVille",
+    "thread": "ฟัง → ออกแบบ → ทดลอง → สะท้อน",
+    "span": "7 ส.ค. — 9 พ.ย. 2569"
+  },
+  "weeks": [
+    {
+      "week": 1,
+      "date": "2026-08-07",
+      "topic": "พื้นฐานการสอนดนตรี: กรอบสังเกต Four Ps และการสะท้อนคิด (reflective practice)",
+      "title": "ฟังอย่างเป็นระบบ และอธิบายด้วยหลักฐาน",
+      "description": "ฝึกเป็นครูที่ฟังก่อนตัดสิน ใช้ Four Ps เลือกจุดสังเกต และใช้ reflective practice อธิบายผลด้วยหลักฐานจากเสียง — คลิป self-coaching 1 P · 1 หลักฐาน",
+      "activity": "เลือก 1 P · Take A/B · O/I/E/R · peer feedback",
+      "category": "foundation",
+      "expertise": "Four Ps · Reflective practice",
+      "clo": [
+        "CLO 1",
+        "CLO 6"
+      ],
+      "reading": [
+        "The Virtuoso Teacher pp. 18–19",
+        "Psychology of Teaching and Learning Music pp. 8–9"
+      ],
+      "cards": [
+        "W1-A",
+        "W1-B"
+      ],
+      "displayDate": "7 ส.ค. 2569",
+      "contentFile": "Week 1 - teaching content.md"
+    },
+    {
+      "week": 2,
+      "date": "2026-08-10",
+      "topic": "ผู้เรียนเรียนรู้ดนตรีอย่างไร: ทฤษฎี แรงจูงใจ และความแตกต่าง",
+      "title": "ทฤษฎีเป็นเลนส์ ไม่ใช่ป้ายกำกับ",
+      "description": "เปรียบเทียบกรอบทฤษฎีการเรียนรู้ และลำดับ Attention → Learning → Memory แยกสิ่งที่สังเกตได้จากสมมติฐาน",
+      "activity": "โปรไฟล์ผู้เรียนสองเลนส์ · Gap คำถามเก็บข้อมูล",
+      "category": "foundation",
+      "expertise": "Learning theory · Attention",
+      "clo": [
+        "CLO 1",
+        "CLO 3",
+        "CLO 6"
+      ],
+      "reading": [
+        "Psychology of Teaching and Learning Music — learning theories",
+        "Helding, The Musician’s Mind ch. 3"
+      ],
+      "cards": [
+        "W2-A",
+        "W2-B"
+      ],
+      "displayDate": "10 ส.ค. 2569",
+      "contentFile": "Week 2 - teaching content.md"
+    },
+    {
+      "week": 3,
+      "date": "2026-08-17",
+      "topic": "จากผลลัพธ์สู่บทเรียน: วัตถุประสงค์ การจัดลำดับ และการประเมิน",
+      "title": "วัตถุประสงค์ที่สังเกตได้ และหลักฐานที่ตรงเป้า",
+      "description": "เขียน instructional objective ที่ประเมินได้ จับคู่หลักฐาน และเกณฑ์สั้นจาก Colwell & Hewitt",
+      "activity": "คู่ objective–evidence + mini rubric",
+      "category": "foundation",
+      "expertise": "Objectives · Assessment",
+      "clo": [
+        "CLO 2",
+        "CLO 3"
+      ],
+      "reading": [
+        "Colwell & Hewitt ch. 2–3"
+      ],
+      "cards": [
+        "W3-A",
+        "W3-B"
+      ],
+      "displayDate": "17 ส.ค. 2569",
+      "contentFile": "Week 3 - teaching content.md"
+    },
+    {
+      "week": 4,
+      "date": "2026-08-24",
+      "topic": "วิทยาศาสตร์การฝึกซ้อม: การจัดเวลา เป้าหมาย และการฝึกที่มีประสิทธิภาพ",
+      "title": "ฝึกเป็นการแก้ปัญหา ไม่ใช่การเล่นผ่าน",
+      "description": "Good practicing = problem solving, correct pathway, microbreaks และ spaced practice ตาม Gebrian",
+      "activity": "Practice experiment log · 1 problem spot",
+      "category": "foundation",
+      "expertise": "Practice science · Spaced practice",
+      "clo": [
+        "CLO 2",
+        "CLO 3"
+      ],
+      "reading": [
+        "Gebrian, Learn Faster, Perform Better"
+      ],
+      "cards": [
+        "W4-A",
+        "W4-B"
+      ],
+      "displayDate": "24 ส.ค. 2569",
+      "contentFile": "Week 4 - teaching content.md"
+    },
+    {
+      "week": 5,
+      "date": "2026-08-31",
+      "topic": "ความสนใจ ข้อมูลป้อนกลับ และสุขภาวะของผู้เรียน",
+      "title": "ให้ผู้เรียนคิดก่อน: inherent · augmented · จังหวะเวลา",
+      "description": "แยก inherent/augmented feedback จัดลำดับ self-check ก่อนครู และขอบเขต referral",
+      "activity": "Feedback protocol หรือ two-take self-check",
+      "category": "foundation",
+      "expertise": "Feedback · Wellbeing",
+      "clo": [
+        "CLO 3",
+        "CLO 5",
+        "CLO 6"
+      ],
+      "reading": [
+        "Helding ch. 4",
+        "Gebrian — role of feedback"
+      ],
+      "cards": [
+        "W5-A",
+        "W5-B"
+      ],
+      "displayDate": "31 ส.ค. 2569",
+      "contentFile": "Week 5 - teaching content.md"
+    },
+    {
+      "week": 6,
+      "date": "2026-09-07",
+      "topic": "นักดนตรีเรียนรู้ด้วยการฟัง: Audiation และ Sound-before-symbol",
+      "title": "เสียงและบริบทก่อนสัญลักษณ์",
+      "description": "Audiation, Whole–Part–Whole และ Skill Learning Sequence — เขียน sequencing script จากเสียงสู่โน้ต",
+      "activity": "Sequencing script ≤ 1 หน้า",
+      "category": "foundation",
+      "expertise": "Audiation · Sound-before-symbol",
+      "clo": [
+        "CLO 1",
+        "CLO 4"
+      ],
+      "reading": [
+        "How to Teach the Language of Music (Mullen)"
+      ],
+      "cards": [
+        "W6-A",
+        "W6-B"
+      ],
+      "displayDate": "7 ก.ย. 2569",
+      "contentFile": "Week 6 - teaching content.md"
+    },
+    {
+      "week": 7,
+      "date": "2026-09-14",
+      "topic": "การสอนบทเรียนเดี่ยว: Simultaneous Learning และการปรับตามผู้เรียน",
+      "title": "เชื่อม ingredients จากท่อนเพลงสั้น",
+      "description": "Simultaneous Learning: แผนบทเรียนจาก 8 ห้อง เชื่อม ≥4 ingredients · Prepare vs Respond",
+      "activity": "Connected-lesson map",
+      "category": "foundation",
+      "expertise": "Simultaneous Learning · Studio",
+      "clo": [
+        "CLO 2",
+        "CLO 3",
+        "CLO 4",
+        "CLO 6"
+      ],
+      "reading": [
+        "Improve Your Teaching",
+        "The Virtuoso Teacher"
+      ],
+      "cards": [
+        "W7-A",
+        "W7-B"
+      ],
+      "displayDate": "14 ก.ย. 2569",
+      "contentFile": "Week 7 - teaching content.md"
+    },
+    {
+      "week": 8,
+      "date": "2026-09-21",
+      "topic": "จากบทเรียนเดี่ยวสู่การสอนกลุ่ม: การซ้อมวง เทคโนโลยี และการเตรียมเข้าสู่การสอนเฉพาะเครื่อง",
+      "title": "ซ้อมกลุ่ม · TPACK · สะพานสู่ Module 2",
+      "description": "แผน sectional 20 นาที ลำดับแก้ error และตัดสินใจเทคโนโลยีด้วย TPACK พร้อมทางเลือกไร้เทค",
+      "activity": "Sectional plan + TPACK decision",
+      "category": "foundation",
+      "expertise": "Ensemble · TPACK",
+      "clo": [
+        "CLO 2",
+        "CLO 5",
+        "CLO 6",
+        "CLO 12"
+      ],
+      "reading": [
+        "Colwell & Hewitt ch. 27",
+        "Bauer, Music Learning Today"
+      ],
+      "cards": [
+        "W8-A",
+        "W8-B"
+      ],
+      "displayDate": "21 ก.ย. 2569",
+      "contentFile": "Week 8 - teaching content.md"
+    },
+    {
+      "week": 9,
+      "date": "2026-09-28",
+      "topic": "เปิดบล็อกเครื่องลมไม้: พิสิกส์การหายใจ ท่าทาง ประชากรพิเศษ และเสียงแรกบนฟลูต",
+      "title": "ฟลูต · first tone · ขอบเขตสุขภาพ",
+      "description": "สรีรวิทยา ท่าทาง ประชากรพิเศษ และ first-tone บนฟลูต (no-reed entry) · micro-teach หรือ transfer note",
+      "activity": "Micro-teach first tone / transfer",
+      "category": "selected",
+      "expertise": "Flute · Physiology · Inclusion",
+      "clo": [
+        "CLO 7",
+        "CLO 8",
+        "CLO 9",
+        "CLO 11"
+      ],
+      "reading": [
+        "Colwell & Hewitt ch. 8–11"
+      ],
+      "cards": [
+        "W9-A",
+        "W9-B"
+      ],
+      "displayDate": "28 ก.ย. 2569",
+      "contentFile": "Week 9 - teaching content.md"
+    },
+    {
+      "week": 10,
+      "date": "2026-10-05",
+      "topic": "ลิ้นคู่: โอโบและบาสซูน — embouchure รีด และการสอนสัปดาห์แรก",
+      "title": "Double reed · reed craft",
+      "description": "หลัก embouchure ลิ้นคู่และความจริงเรื่อง reed ช่วงต้น · micro-teach หรือ reed teaching note",
+      "activity": "Micro-teach / reed note + transfer",
+      "category": "selected",
+      "expertise": "Oboe · Bassoon",
+      "clo": [
+        "CLO 7",
+        "CLO 8",
+        "CLO 9",
+        "CLO 10"
+      ],
+      "reading": [
+        "Colwell & Hewitt ch. 12, 14"
+      ],
+      "cards": [
+        "W10-A",
+        "W10-B"
+      ],
+      "displayDate": "5 ต.ค. 2569",
+      "contentFile": "Week 10 - teaching content.md"
+    },
+    {
+      "week": 11,
+      "date": "2026-10-12",
+      "topic": "ลิ้นเดี่ยว: คลาริเน็ตและแซกโซโฟน — embouchure เรจิสเตอร์ และอินโทเนชัน",
+      "title": "Single reed · twelfth vs octave",
+      "description": "embouchure ลิ้นเดี่ยว ความต่าง overblow (twelfth / octave) และ transfer ข้ามเครื่อง",
+      "activity": "Micro-teach + sax-aware transfer",
+      "category": "selected",
+      "expertise": "Clarinet · Saxophone",
+      "clo": [
+        "CLO 7",
+        "CLO 8",
+        "CLO 9",
+        "CLO 10"
+      ],
+      "reading": [
+        "Colwell & Hewitt ch. 13, 15"
+      ],
+      "cards": [
+        "W11-A",
+        "W11-B"
+      ],
+      "displayDate": "12 ต.ค. 2569",
+      "contentFile": "Week 11 - teaching content.md"
+    },
+    {
+      "week": 12,
+      "date": "2026-10-19",
+      "topic": "เปิดบล็อก brass: หลักร่วมของเครื่องทองเหลืองและทรัมเป็ตระยะแรก",
+      "title": "Brass principles · Trumpet",
+      "description": "หลักร่วม brass + ทรัมเป็ตระยะแรก · external-focus cue แทน internal-focus ที่ทำร้าย",
+      "activity": "Micro-teach + external-focus rewrite",
+      "category": "selected",
+      "expertise": "Brass · Trumpet",
+      "clo": [
+        "CLO 7",
+        "CLO 8",
+        "CLO 9",
+        "CLO 10"
+      ],
+      "reading": [
+        "Colwell & Hewitt ch. 16–17"
+      ],
+      "cards": [
+        "W12-A",
+        "W12-B"
+      ],
+      "displayDate": "19 ต.ค. 2569",
+      "contentFile": "Week 12 - teaching content.md"
+    },
+    {
+      "week": 13,
+      "date": "2026-10-26",
+      "topic": "การสอนฮอร์น: partial ที่ชิดกัน มือในกระดิ่ง และการเลือกเสียงด้วยหู",
+      "title": "Horn · ear-first partial",
+      "description": "ปัญหาเฉพาะฮอร์น: partial ชิด มือในกระดิ่ง · สอนหา partial ด้วยหูก่อน chart",
+      "activity": "Micro-teach Hear→Try→Name",
+      "category": "selected",
+      "expertise": "Horn",
+      "clo": [
+        "CLO 7",
+        "CLO 8",
+        "CLO 9",
+        "CLO 10"
+      ],
+      "reading": [
+        "Colwell & Hewitt ch. 18"
+      ],
+      "cards": [
+        "W13-A",
+        "W13-B"
+      ],
+      "displayDate": "26 ต.ค. 2569",
+      "contentFile": "Week 13 - teaching content.md"
+    },
+    {
+      "week": 14,
+      "date": "2026-11-02",
+      "topic": "Low brass และทูบา: สไลด์ด้วยหู ปริมาณลม และ embouchure ปลายตระกูล brass",
+      "title": "Trombone · Tuba close",
+      "description": "สไลด์ด้วยหู / ปริมาณลม / embouchure ทูบา · finalize transfer sketches",
+      "activity": "Micro-teach + transfer finalize",
+      "category": "selected",
+      "expertise": "Low brass · Tuba",
+      "clo": [
+        "CLO 9",
+        "CLO 10",
+        "CLO 11",
+        "CLO 12"
+      ],
+      "reading": [
+        "Colwell & Hewitt ch. 19–20"
+      ],
+      "cards": [
+        "W14-A",
+        "W14-B"
+      ],
+      "displayDate": "2 พ.ย. 2569",
+      "contentFile": "Week 14 - teaching content.md"
+    },
+    {
+      "week": 15,
+      "date": "2026-11-09",
+      "topic": "Capstone: บูรณาการ beginning band — ลำดับแนะนำเครื่อง แผนซ้อม และพอร์ตโฟลิโอ",
+      "title": "Beginning-band integration",
+      "description": "ลำดับแนะนำเครื่อง 8 สัปดาห์ + แผนซ้อม + ส่ง Instrumental Pedagogy Portfolio",
+      "activity": "Group sequence + portfolio checklist",
+      "category": "summary",
+      "expertise": "Capstone · Ensemble curriculum",
+      "clo": [
+        "CLO 1",
+        "CLO 2",
+        "CLO 3",
+        "CLO 4",
+        "CLO 5",
+        "CLO 6",
+        "CLO 12"
+      ],
+      "reading": [
+        "Colwell & Hewitt ch. 27 (revisit)"
+      ],
+      "cards": [
+        "W15-A",
+        "W15-B"
+      ],
+      "displayDate": "9 พ.ย. 2569",
+      "contentFile": "Week 15 - teaching content.md"
+    }
+  ],
+  "modules": [
+    {
+      "id": "01",
+      "label": "Foundation",
+      "title": "Module 1 · สัปดาห์ 1–8",
+      "body": "ปรัชญาการสอน ทฤษฎีการเรียนรู้ วิทยาศาสตร์การฝึก ข้อมูลป้อนกลับ musicianship บทเรียนเดี่ยว และการซ้อมกลุ่ม",
+      "href": "#works"
+    },
+    {
+      "id": "02",
+      "label": "Specialist",
+      "title": "Module 2 · สัปดาห์ 9–14",
+      "body": "การสอนเฉพาะตระกูลเครื่อง: ฟลูต ลิ้นคู่ ลิ้นเดี่ยว brass ฮอร์น และ low brass/ทูบา",
+      "href": "#works"
+    },
+    {
+      "id": "03",
+      "label": "Capstone",
+      "title": "สัปดาห์ 15",
+      "body": "บูรณาการ beginning band ลำดับแนะนำเครื่อง และพอร์ตโฟลิโอการสอนเครื่อง",
+      "href": "/weekly-content/15"
+    }
+  ]
+}

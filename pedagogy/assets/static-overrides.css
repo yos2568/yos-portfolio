@@ -1,0 +1,18 @@
+/* Static deploy under /pedagogy/ — small layout fixes */
+body {
+  margin: 0;
+}
+.topbar .brand-text {
+  letter-spacing: 0.12em;
+}
+/* Ensure buttons look like links in portfolio context */
+button.work-row,
+button.module-card {
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
