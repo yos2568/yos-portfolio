@@ -15,6 +15,12 @@ revision: "motivation-A 2026-08-06 — embed why-lines; intro + self-coaching cl
 
 **วันเรียน:** 7 ส.ค. 2026 · **ส่งงาน:** 12 ส.ค. 2026 ภายใน 23:59 · [Google Form](https://forms.gle/4HKLMUA5keHqKLMQA)
 
+## แหล่งเรียนรู้สำหรับสัปดาห์ที่ 1
+
+- [Wind Pedagogy สัปดาห์ที่ 1](https://notebook.google.com/notebook/c3e570a3-8e7c-4be2-a70b-153605f75ef3/artifact/b1c556fe-33b1-4158-85b0-cdfaefb4b52e?utm_source=nlm_web_share&utm_medium=google_oo&utm_campaign=art_share_1&utm_content=&utm_smc=nlm_web_share_google_oo_art_share_1_)
+- [การฟังอย่างเป็นระบบ](https://notebook.google.com/notebook/c3e570a3-8e7c-4be2-a70b-153605f75ef3/artifact/5d5feb7f-b296-4457-9479-c772391de4df?utm_source=nlm_web_share&utm_medium=google_oo&utm_campaign=art_share_1&utm_content=&utm_smc=nlm_web_share_google_oo_art_share_1_)
+
+
 สัปดาห์นี้เราฝึกเป็น **ครูที่ฟังก่อนตัดสินหรือวิจารณ์** เริ่มจากสิ่งที่ได้ยินจริง แล้วจึงทดลองและอธิบายผลด้วยหลักฐาน เราจะแยกให้ชัดว่าอะไรคือ **สิ่งที่หนังสือกล่าว** และอะไรคือ **คำถามหรือตัวอย่างของครู**
 
 ---
