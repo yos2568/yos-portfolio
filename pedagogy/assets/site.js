@@ -161,6 +161,25 @@ function categoryLabel(category) {
   return "Capstone";
 }
 
+const WEEK_ONE_RESOURCES = [
+  { label: "Wind Pedagogy สัปดาห์ที่ 1", href: "https://notebook.google.com/notebook/c3e570a3-8e7c-4be2-a70b-153605f75ef3/artifact/b1c556fe-33b1-4158-85b0-cdfaefb4b52e?utm_source=nlm_web_share&utm_medium=google_oo&utm_campaign=art_share_1&utm_content=&utm_smc=nlm_web_share_google_oo_art_share_1_" },
+  { label: "การฟังอย่างเป็นระบบ", href: "https://notebook.google.com/notebook/c3e570a3-8e7c-4be2-a70b-153605f75ef3/artifact/5d5feb7f-b296-4457-9479-c772391de4df?utm_source=nlm_web_share&utm_medium=google_oo&utm_campaign=art_share_1&utm_content=&utm_smc=nlm_web_share_google_oo_art_share_1_" },
+];
+
+function renderWeekResourceLinks(weekNumber) {
+  if (weekNumber !== 1) return "";
+  return `
+    <div class="lesson-resource-links" aria-label="แหล่งเรียนรู้สำหรับสัปดาห์ที่ 1">
+      <p class="lesson-resource-label">แหล่งเรียนรู้สำหรับสัปดาห์ที่ 1</p>
+      <div class="lesson-resource-actions">
+        ${WEEK_ONE_RESOURCES.map((resource) => `
+          <a class="button lesson-resource-link" href="${escapeHtml(resource.href)}" target="_blank" rel="noopener noreferrer">
+            ${escapeHtml(resource.label)} <span aria-hidden="true">↗</span>
+          </a>`).join("")}
+      </div>
+    </div>`;
+}
+
 /* ——— Cursor ——— */
 function initCursor() {
   const fine = window.matchMedia("(pointer: fine)").matches;
@@ -441,6 +460,7 @@ async function main() {
               <span>${escapeHtml((week.clo || []).join(" · "))}</span>
               <span>${escapeHtml(week.activity)}</span>
             </div>
+            ${renderWeekResourceLinks(week.week)}
           </div>
           <div class="lesson-viewer-body">
             <p class="lesson-viewer-status">กำลังโหลดบทเรียน…</p>
