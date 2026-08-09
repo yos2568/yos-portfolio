@@ -1020,12 +1020,13 @@ button.module-card {
   z-index: 1;
   display: flex;
   flex-direction: column;
-  width: min(1080px, 100%);
+  width: 100%;
+  max-width: none;
   max-height: 100%;
-  margin: 0 auto;
+  margin: 0;
   background: var(--paper);
   color: var(--ink);
-  box-shadow: 0 0 0 1px var(--line-light), 0 30px 80px oklch(0% 0 0 / 0.45);
+  box-shadow: none;
   overflow: hidden;
 }
 .lesson-viewer-bar {
