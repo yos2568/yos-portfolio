@@ -28,6 +28,7 @@ Open http://localhost:8765/
 ├── images/                    # Photography (keep stable URLs)
 ├── form-analysis/             # Teaching materials (stable paths)
 ├── pedagogy/                  # Wind Pedagogy course hub (3503394)
+├── arttechno/                 # Art and Technology course hub (3500230)
 ├── clarinethology/            # Static bilingual clarinet masterclass companion
 ├── tofu/                      # Private family page
 ├── favicon.svg

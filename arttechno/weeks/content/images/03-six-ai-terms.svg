@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" role="img" aria-labelledby="t3 d3">
+  <title id="t3">หกคำศัพท์ AI ที่ควรรู้</title>
+  <desc id="d3">Hallucination Temperature Tokens Context window RAG Embeddings</desc>
+  <rect width="960" height="560" rx="24" fill="#0b1118"/>
+  <text x="480" y="42" text-anchor="middle" fill="#f0e6d0" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="22" font-weight="700">6 คำศัพท์ AI ที่ใช้จริงบ่อย</text>
+  <text x="480" y="70" text-anchor="middle" fill="#8aa0b2" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="14">จำหนึ่งประโยคต่อคำ — พอใช้แชทบอทอย่างมีสติ</text>
+
+  <!-- Row 1 -->
+  <rect x="32" y="100" width="288" height="180" rx="16" fill="#141d27" stroke="#3a4a5a"/>
+  <text x="52" y="132" fill="#7ec8dc" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="16" font-weight="800">1 · Hallucination</text>
+  <text x="52" y="158" fill="#e8c27a" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="13">การตอบมั่ว / มโน</text>
+  <text x="52" y="196" fill="#c5d4e0" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="14">มั่นใจแต่ข้อเท็จจริงผิดได้</text>
+  <text x="52" y="224" fill="#8aa0b2" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="13">ไม่ใช่ “โกหกมีเจตนา”</text>
+  <text x="52" y="252" fill="#8aa0b2" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="13">→ ต้องตรวจแหล่งเสมอ</text>
+
+  <rect x="336" y="100" width="288" height="180" rx="16" fill="#141d27" stroke="#3a4a5a"/>
+  <text x="356" y="132" fill="#7ec8dc" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="16" font-weight="800">2 · Temperature</text>
+  <text x="356" y="158" fill="#e8c27a" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="13">อุณหภูมิการสุ่ม</text>
+  <text x="356" y="196" fill="#c5d4e0" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="14">ปุ่ม “กล้าเดา” ของคำตอบ</text>
+  <text x="356" y="224" fill="#8aa0b2" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="13">ต่ำ = ปลอดภัย · สูง = สร้างสรรค์</text>
+  <text x="356" y="252" fill="#8aa0b2" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="13">→ เลือกตามงาน</text>
+
+  <rect x="640" y="100" width="288" height="180" rx="16" fill="#141d27" stroke="#3a4a5a"/>
+  <text x="660" y="132" fill="#7ec8dc" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="16" font-weight="800">3 · Tokens</text>
+  <text x="660" y="158" fill="#e8c27a" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="13">โทเคน</text>
+  <text x="660" y="196" fill="#c5d4e0" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="14">ชิ้นข้อความที่โมเดล “กิน”</text>
+  <text x="660" y="224" fill="#8aa0b2" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="13">ไม่เท่ากับหนึ่งคำเสมอ</text>
+  <text x="660" y="252" fill="#8aa0b2" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="13">→ เกี่ยวโควตาและความยาว</text>
+
+  <!-- Row 2 -->
+  <rect x="32" y="304" width="288" height="180" rx="16" fill="#141d27" stroke="#3a4a5a"/>
+  <text x="52" y="336" fill="#7ec8dc" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="16" font-weight="800">4 · Context window</text>
+  <text x="52" y="362" fill="#e8c27a" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="13">หน้าต่างบริบท</text>
+  <text x="52" y="400" fill="#c5d4e0" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="14">หน่วยความจำระยะสั้น</text>
+  <text x="52" y="428" fill="#8aa0b2" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="13">ของการสนทนา</text>
+  <text x="52" y="456" fill="#8aa0b2" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="13">→ เกินแล้วอาจลืมต้นเรื่อง</text>
+
+  <rect x="336" y="304" width="288" height="180" rx="16" fill="#141d27" stroke="#3a4a5a"/>
+  <text x="356" y="336" fill="#7ec8dc" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="16" font-weight="800">5 · RAG</text>
+  <text x="356" y="362" fill="#e8c27a" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="13">ค้นก่อน แล้วค่อยตอบ</text>
+  <text x="356" y="400" fill="#c5d4e0" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="14">ไปหาเอกสารก่อนสร้างคำตอบ</text>
+  <text x="356" y="428" fill="#8aa0b2" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="13">เหมือนเปิดหนังสือก่อนตอบ</text>
+  <text x="356" y="456" fill="#8aa0b2" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="13">→ ช่วยลดการมโน</text>
+
+  <rect x="640" y="304" width="288" height="180" rx="16" fill="#141d27" stroke="#3a4a5a"/>
+  <text x="660" y="336" fill="#7ec8dc" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="16" font-weight="800">6 · Embeddings</text>
+  <text x="660" y="362" fill="#e8c27a" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="13">เวกเตอร์ความหมาย</text>
+  <text x="660" y="400" fill="#c5d4e0" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="14">ข้อความ → ชุดตัวเลข</text>
+  <text x="660" y="428" fill="#8aa0b2" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="13">ความหมายใกล้ = ตัวเลขใกล้</text>
+  <text x="660" y="456" fill="#8aa0b2" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="13">→ ใช้ค้นหาเชิงความหมาย</text>
+</svg>
