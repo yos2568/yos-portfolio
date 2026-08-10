@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>สัปดาห์ที่ 2 · Local AI + Agentic Workflow</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <script src="../js/motion.js"></script>
+</head>
+<body data-base=".." data-page="weeks">
+  <a class="skip-link" href="#main-content">ข้ามไปยังเนื้อหา</a>
+  <header data-site-header></header>
+
+  <main id="main-content" class="main" data-week-page="2">
+    <p class="meta">กำลังโหลดเนื้อหาสัปดาห์ที่ 2…</p>
+  </main>
+
+  <template id="week-02-chapter-content">
+    <h2 class="chapter-title">บทที่ 2 · Local AI และ Agentic Workflow บน Windows 11</h2>
+    <p><strong>ติดตั้ง Ollama · เลือกโมเดลฟรี · ทำงานแบบ goal → plan → verify</strong></p>
+    <p class="lesson-intro">คาบนี้ไม่ได้ใช้ AI เป็นเพียง chatbot: นักศึกษาจะติดตั้ง AI ในเครื่อง (local AI), เลือกโมเดลฟรีเพียงหนึ่งตัว และฝึก <strong>เวิร์กโฟลว์แบบตัวแทน (agentic workflow)</strong> ที่มีเป้าหมาย แผน การอนุมัติ การลงมือทำ การตรวจผล และบันทึกการตัดสินใจของมนุษย์</p>
+
+    <table>
+      <tbody>
+        <tr><th scope="row">เครื่องที่ใช้</th><td>PC ห้องแล็บ · Windows 11 · อินเทอร์เน็ตสำหรับดาวน์โหลดครั้งแรก</td></tr>
+        <tr><th scope="row">ระยะเวลา</th><td>3 ชั่วโมง · 13:00–16:00 น.</td></tr>
+        <tr><th scope="row">สิ่งที่นักศึกษาไม่ต้องมี</th><td>บัตรเครดิต · API key · บัญชีแบบเสียเงิน · พื้นฐานการเขียนโปรแกรม</td></tr>
+        <tr><th scope="row">คำสำคัญ</th><td>AI ในเครื่อง (local AI) · โมเดล (model) · ตัวแทน AI (agent) · หน้าต่างคำสั่ง (PowerShell) · คำสั่งสำหรับ AI (prompt)</td></tr>
+      </tbody>
+    </table>
+
+    <aside class="lesson-rule" aria-label="กติกาหลักของคาบ">
+      <p><strong>กติกาของคาบ:</strong> นักศึกษาใช้เฉพาะ <strong>โมเดลฟรีที่รันในเครื่อง</strong> และดาวน์โหลด <strong>ครั้งละ 1 โมเดล</strong> เท่านั้น ส่วนโมเดล cloud ขนาดใหญ่ใช้ได้เฉพาะ <strong>การสาธิตโดยอาจารย์</strong> ผ่านบัญชี Ollama Free ของอาจารย์ ไม่ใช่ขั้นตอนที่นักศึกษาทุกคนต้องทำ</p>
+    </aside>
+
+    <h2>แผนที่คาบ 3 ชั่วโมง</h2>
+    <div class="comparison-table-wrap" tabindex="0" aria-label="ตารางเวลาเรียน เลื่อนซ้ายขวาได้">
+      <table>
+        <thead><tr><th>เวลา</th><th>สิ่งที่ทำ</th><th>ผลที่ควรได้</th></tr></thead>
+        <tbody>
+          <tr><td>13:00–13:10</td><td>Local AI · agent · กติกาความปลอดภัย</td><td>แยก chatbot ออกจาก agentic workflow ได้</td></tr>
+          <tr><td>13:10–13:40</td><td>ติดตั้ง Ollama บน Windows 11 และผ่านจุดตรวจ</td><td>Ollama พร้อมใช้ใน PowerShell</td></tr>
+          <tr><td>13:40–13:55</td><td>เลือกโมเดลฟรี 1 ตัว · ดาวน์โหลด · ทดลอง chat แรก</td><td>โมเดลเล็กหนึ่งตัวตอบคำถามได้</td></tr>
+          <tr><td>13:55–14:05</td><td>พัก 10 นาที</td><td>—</td></tr>
+          <tr><td>14:05–14:20</td><td>อาจารย์สาธิต Nemotron cloud</td><td>เห็นความต่างของ local และ cloud โดยไม่โหลดโมเดลใหญ่</td></tr>
+          <tr><td>14:20–14:45</td><td>Agentic workflow lab · goal → plan → approval → verify</td><td>แผนงานที่มีจุดตรวจและมนุษย์ควบคุม</td></tr>
+          <tr><td>14:45–15:30</td><td>ทำ mini-project เดี่ยวหรือเป็นคู่</td><td>ร่างผลงาน + agent log อย่างน้อย 1 รอบ</td></tr>
+          <tr><td>15:30–15:50</td><td>เปรียบเทียบผล · ตรวจหลักฐาน · วิจารณ์ข้อผิดพลาด</td><td>อธิบายสิ่งที่ AI ทำได้/ทำไม่ได้</td></tr>
+          <tr><td>15:50–16:00</td><td>สรุป · disclosure · เตรียมสัปดาห์ถัดไป</td><td>บันทึกการตัดสินใจของตนเองครบ</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>0. รู้จักคำสำคัญก่อนเริ่ม</h2>
+    <div class="lesson-grid">
+      <article class="learning-card">
+        <span class="term-label">Ollama</span>
+        <h3>โปรแกรมเรียกใช้ AI ในเครื่อง</h3>
+        <p>Ollama เป็นโปรแกรมที่ดาวน์โหลดและรันโมเดลภาษาบน PC ของเรา เมื่อรันแบบ local ข้อความจะถูกประมวลผลบนเครื่อง ไม่ใช่ส่งไปให้โมเดล cloud โดยอัตโนมัติ</p>
+      </article>
+      <article class="learning-card">
+        <span class="term-label">Model / โมเดล</span>
+        <h3>“สมอง” แต่ละรุ่นมีความถนัดต่างกัน</h3>
+        <p>โมเดลคือไฟล์ AI ที่เลือกใช้ เช่น รุ่นเล็กสำหรับเครื่องทั่วไป รุ่นที่ช่วยคิดเชิงตรรกะ หรือรุ่นที่อ่านภาพได้ รุ่นใหญ่กว่าอาจเก่งขึ้น แต่ใช้พื้นที่และหน่วยความจำมากขึ้น</p>
+      </article>
+      <article class="learning-card">
+        <span class="term-label">PowerShell</span>
+        <h3>หน้าต่างสั่ง Windows และ Ollama</h3>
+        <p>ใช้พิมพ์คำสั่งสั้น ๆ เพื่อเช็ก ติดตั้ง ดาวน์โหลด หรือเปิดโมเดล ไม่ใช่พื้นที่สำหรับวาง prompt ยาว ๆ</p>
+      </article>
+      <article class="learning-card">
+        <span class="term-label">Prompt / คำสั่งสำหรับ AI</span>
+        <h3>ข้อความที่กำหนดงานให้โมเดล</h3>
+        <p>prompt ที่ดีบอกบทบาท งาน บริบท ข้อจำกัด และรูปแบบคำตอบชัดเจน นักศึกษายังต้องอ่าน วิจารณ์ และตรวจผลเองเสมอ</p>
+      </article>
+      <article class="learning-card">
+        <span class="term-label">Agentic workflow / เวิร์กโฟลว์แบบตัวแทน</span>
+        <h3>AI ทำงานหลายขั้นภายใต้การควบคุมของมนุษย์</h3>
+        <p>ไม่ใช่การสั่งครั้งเดียวแล้วเชื่อทันที แต่เป็นลูป: ตั้งเป้าหมาย → ให้ AI เสนอแผน → มนุษย์อนุมัติทีละขั้น → ตรวจหลักฐาน → บันทึกและปรับ</p>
+      </article>
+    </div>
+
+    <h2>1. Agentic workflow คืออะไร</h2>
+    <p><strong>Chatbot</strong> ตอบข้อความครั้งต่อครั้ง ส่วน <strong>agentic workflow</strong> แบ่งงานเป็นขั้น ใช้เครื่องมือหรือเอกสารตามสิทธิ์ที่ได้รับ ตรวจผล แล้วรายงานสิ่งที่เกิดขึ้น คาบนี้ใช้แบบ <strong>human-in-the-loop</strong>: AI ไม่มีสิทธิ์ลบไฟล์ ส่งอีเมล ซื้อของ หรือเผยแพร่สิ่งใดเอง</p>
+    <div class="agent-flow" aria-label="ลำดับเวิร์กโฟลว์แบบตัวแทน">
+      <article><span>1</span><strong>Goal</strong><p>เป้าหมายชัด</p></article>
+      <article><span>2</span><strong>Plan</strong><p>AI เสนอขั้นตอน</p></article>
+      <article><span>3</span><strong>Approve</strong><p>มนุษย์เลือก/อนุมัติ</p></article>
+      <article><span>4</span><strong>Act</strong><p>ทำเฉพาะขั้นที่อนุญาต</p></article>
+      <article><span>5</span><strong>Verify</strong><p>ตรวจผลกับหลักฐานจริง</p></article>
+      <article><span>6</span><strong>Log &amp; revise</strong><p>บันทึกและปรับรอบต่อไป</p></article>
+    </div>
+    <aside class="lesson-rule" aria-label="ขอบเขตการใช้ agent">
+      <p><strong>ขอบเขตของคาบ:</strong> งาน agentic ทุกชิ้นต้องมีจุดที่มนุษย์ตรวจและอนุมัติ ห้ามเปิดสิทธิ์ “ทำทุกอย่างอัตโนมัติ” และห้ามให้ AI ดำเนินการกับไฟล์ บัญชี หรือข้อมูลของผู้อื่นโดยไม่เข้าใจผล</p>
+    </aside>
+
+    <h2>2. เตรียมเครื่อง Windows 11</h2>
+    <ol class="step-list">
+      <li>
+        <h3>เตรียมพื้นที่และหน้าจอ</h3>
+        <p>เชื่อมต่ออินเทอร์เน็ต และเตรียมพื้นที่ว่างอย่างน้อยประมาณ 10 GB สำหรับคาบนี้ (ตัวโปรแกรมและโมเดลใช้พื้นที่) เปิดเอกสารนี้ไว้ด้านซ้าย และเปิด PowerShell ไว้ด้านขวา</p>
+      </li>
+      <li>
+        <h3>เปิด PowerShell / หน้าต่างคำสั่ง</h3>
+        <p>กดปุ่ม Windows → พิมพ์ <strong>PowerShell</strong> → เปิด <strong>Windows PowerShell</strong> หรือ <strong>Terminal</strong> หากมีข้อความผิดพลาดยาวสีแดง ให้หยุดและเรียก TA อย่ารันคำสั่งซ้ำหลายครั้ง</p>
+      </li>
+      <li>
+        <h3>เลือกวิธีติดตั้ง</h3>
+        <p><strong>วิธีแนะนำ:</strong> เปิด <a href="https://ollama.com/download/windows" target="_blank" rel="noopener noreferrer">หน้า Download for Windows ของ Ollama</a> → ดาวน์โหลดตัวติดตั้ง → เปิดไฟล์ → Install ตามหน้าจอ จากนั้นปิดและเปิด PowerShell ใหม่หนึ่งครั้ง</p>
+        <p>หากอาจารย์ให้ใช้คำสั่ง ให้ใช้บัตรคำสั่งอย่างเป็นทางการด้านล่างเท่านั้น</p>
+      </li>
+    </ol>
+
+    <article class="copy-card command-card">
+      <div class="copy-card-top">
+        <div><span class="card-label">Command card · PowerShell</span><h3>ติดตั้ง Ollama จากเว็บไซต์ทางการ</h3></div>
+        <button class="copy-card-button" type="button" data-copy-card>คัดลอก</button>
+      </div>
+      <pre data-copy-source><code>irm https://ollama.com/install.ps1 | iex</code></pre>
+      <p class="card-note"><strong>ทำอะไร:</strong> ดาวน์โหลดและรันตัวติดตั้งจาก Ollama โดยตรง · ใช้เฉพาะเมื่ออาจารย์อนุญาต · เมื่อติดตั้งเสร็จ ให้ปิด PowerShell แล้วเปิดใหม่</p>
+    </article>
+
+    <article class="copy-card command-card">
+      <div class="copy-card-top">
+        <div><span class="card-label">Command card · Checkpoint A</span><h3>ตรวจว่า Ollama ติดตั้งสำเร็จ</h3></div>
+        <button class="copy-card-button" type="button" data-copy-card>คัดลอก</button>
+      </div>
+      <pre data-copy-source><code>ollama -v</code></pre>
+      <p class="card-note"><strong>ผ่าน:</strong> เห็นชื่อ Ollama และหมายเลขเวอร์ชัน · <strong>ไม่ผ่าน:</strong> ปิด–เปิด PowerShell ใหม่ก่อน แล้วเรียก TA หากยังไม่พบคำสั่ง</p>
+    </article>
+
+    <h2>3. เลือกโมเดลฟรีเพียงหนึ่งตัว</h2>
+    <p>เลื่อนการ์ดด้านล่างซ้าย–ขวาเพื่อเปรียบเทียบ เลือก <strong>เพียง 1 การ์ด</strong> ที่เหมาะกับเครื่องของคุณ แล้วรันคำสั่งในบัตรนั้น ห้ามดาวน์โหลดทุกตัวเพื่อ “ลองดู”</p>
+
+    <div class="model-rail" aria-label="การ์ดโมเดลฟรี เลื่อนซ้ายขวาได้" tabindex="0">
+      <article class="model-card recommended">
+        <span class="term-label">เริ่มต้น · Recommended</span>
+        <h3>Llama 3.2 1B</h3>
+        <p class="model-meta">Meta · ประมาณ 1.3 GB · ข้อความ (text)</p>
+        <p>เหมาะกับ PC ทั่วไปและการเริ่มเรียน ช่วยอธิบาย สรุป และพูดคุยได้ โดยมีภาษาไทยอยู่ในกลุ่มภาษาที่รองรับอย่างเป็นทางการ</p>
+        <article class="copy-card command-card">
+          <div class="copy-card-top"><div><span class="card-label">Command card</span><h3>เริ่มโมเดล</h3></div><button class="copy-card-button" type="button" data-copy-card>คัดลอก</button></div>
+          <pre data-copy-source><code>ollama run llama3.2:1b</code></pre>
+          <p class="card-note">ดาวน์โหลดครั้งแรกและเปิด chat ให้ทันที</p>
+        </article>
+      </article>
+
+      <article class="model-card recommended">
+        <span class="term-label">สมดุล · Recommended</span>
+        <h3>Qwen3 4B</h3>
+        <p class="model-meta">Alibaba Cloud · ประมาณ 2.5 GB · ข้อความ (text)</p>
+        <p>เหมาะกับการคิดวิเคราะห์ งานทั่วไป และ prompt ที่ต้องการคำตอบมีโครงสร้าง เหมาะเมื่อเครื่องมี RAM และพื้นที่พอมากกว่าโมเดลเริ่มต้น</p>
+        <article class="copy-card command-card">
+          <div class="copy-card-top"><div><span class="card-label">Command card</span><h3>เริ่มโมเดล</h3></div><button class="copy-card-button" type="button" data-copy-card>คัดลอก</button></div>
+          <pre data-copy-source><code>ollama run qwen3:4b</code></pre>
+          <p class="card-note">เลือกแทน Llama ไม่ใช่เลือกเพิ่ม</p>
+        </article>
+      </article>
+
+      <article class="model-card">
+        <span class="term-label">ภาพ + ข้อความ</span>
+        <h3>Gemma 3 4B</h3>
+        <p class="model-meta">Google · ประมาณ 3.3 GB · ข้อความและภาพ (vision)</p>
+        <p>เหมาะกับผู้เรียนที่อยากทดลองถามคำถามจากภาพ เช่น ภาพสเก็ตช์ งานออกแบบ หรือสื่อการสอน เริ่มใช้เมื่ออาจารย์ยืนยันว่าเครื่องพร้อม</p>
+        <article class="copy-card command-card">
+          <div class="copy-card-top"><div><span class="card-label">Command card</span><h3>เริ่มโมเดล</h3></div><button class="copy-card-button" type="button" data-copy-card>คัดลอก</button></div>
+          <pre data-copy-source><code>ollama run gemma3:4b</code></pre>
+          <p class="card-note">ใช้เป็นโมเดลเดียวของคุณในคาบนี้</p>
+        </article>
+      </article>
+
+      <article class="model-card">
+        <span class="term-label">ตรรกะ · ทดลอง</span>
+        <h3>DeepSeek-R1 1.5B</h3>
+        <p class="model-meta">DeepSeek · ประมาณ 1.1 GB · reasoning</p>
+        <p>เหมาะกับการฝึกถามโจทย์เชิงตรรกะและเปรียบเทียบขั้นตอน อาจใช้เวลาคิดนานกว่า จึงใช้เมื่อต้องการทดลองโดยเฉพาะ</p>
+        <article class="copy-card command-card">
+          <div class="copy-card-top"><div><span class="card-label">Command card</span><h3>เริ่มโมเดล</h3></div><button class="copy-card-button" type="button" data-copy-card>คัดลอก</button></div>
+          <pre data-copy-source><code>ollama run deepseek-r1:1.5b</code></pre>
+          <p class="card-note">ตรวจคำตอบและเหตุผลเองเสมอ</p>
+        </article>
+      </article>
+
+      <article class="model-card">
+        <span class="term-label">Agentic experiment · English-first</span>
+        <h3>Nemotron 3 Nano 4B</h3>
+        <p class="model-meta">NVIDIA · ประมาณ 2.8 GB · ข้อความ (text) · reasoning</p>
+        <p>ตัวเลือกสำหรับทดลอง workflow แบบตัวแทนและงานใช้เหตุผลบนเครื่อง เหมาะกับ prompt ภาษาอังกฤษมากกว่า จึงไม่ใช่ตัวเริ่มต้นสำหรับกิจกรรมภาษาไทย</p>
+        <article class="copy-card command-card">
+          <div class="copy-card-top"><div><span class="card-label">Command card</span><h3>เริ่มโมเดล</h3></div><button class="copy-card-button" type="button" data-copy-card>คัดลอก</button></div>
+          <pre data-copy-source><code>ollama run nemotron-3-nano:4b</code></pre>
+          <p class="card-note">เลือกแทนโมเดลอื่น ไม่ใช่เลือกเพิ่ม</p>
+        </article>
+      </article>
+    </div>
+
+    <aside class="lesson-rule" aria-label="ข้อควรจำเกี่ยวกับโมเดลฟรี">
+      <p><strong>คำว่า free / ฟรี:</strong> ไม่มีค่าบริการต่อข้อความเมื่อรันโมเดลในเครื่อง แต่โมเดลมีเงื่อนไขใบอนุญาต (licence) ต่างกัน และยังใช้พื้นที่ดิสก์ ไฟฟ้า และทรัพยากรของ PC อยู่เสมอ</p>
+    </aside>
+
+    <section class="teacher-demo" aria-labelledby="teacher-demo-title">
+      <p class="term-label">Teacher demonstration only · Cloud AI</p>
+      <h3 id="teacher-demo-title">สาธิตโมเดลใหญ่โดยไม่ให้ PC ห้องแล็บแบกภาระ</h3>
+      <p>อาจารย์ใช้บัญชี Ollama Free ของตนเองเพื่อสาธิต <strong>Nemotron 3 Nano 30B Cloud</strong> เพียงช่วงสั้น ๆ นักศึกษาไม่ต้องล็อกอินหรือใช้โควตา cloud ของตนเอง และยังใช้ local model เล็กต่อไป</p>
+      <article class="copy-card command-card">
+        <div class="copy-card-top"><div><span class="card-label">Teacher command card · One-time sign-in</span><h3>ลงชื่อเข้าใช้ Ollama Cloud</h3></div><button class="copy-card-button" type="button" data-copy-card>คัดลอก</button></div>
+        <pre data-copy-source><code>ollama signin</code></pre>
+        <p class="card-note">สำหรับอาจารย์เท่านั้น · ต้องมีบัญชี Ollama Free · ไม่ใช่ขั้นตอนของนักศึกษา</p>
+      </article>
+      <article class="copy-card command-card">
+        <div class="copy-card-top"><div><span class="card-label">Teacher command card · Cloud demo</span><h3>เปิด Nemotron 3 Nano 30B ใน cloud</h3></div><button class="copy-card-button" type="button" data-copy-card>คัดลอก</button></div>
+        <pre data-copy-source><code>ollama run nemotron-3-nano:30b-cloud</code></pre>
+        <p class="card-note">ไม่ดาวน์โหลดโมเดล 24 GB ลงเครื่องห้องแล็บ · Free plan มีโควตา cloud แบบ light usage จึงสาธิตสั้น ๆ แล้วเปรียบเทียบกับ local model</p>
+      </article>
+    </section>
+
+    <h3>บริษัทต่างกัน · ความถนัดต่างกัน</h3>
+    <div class="comparison-table-wrap" tabindex="0" aria-label="ตารางเปรียบเทียบผู้พัฒนาโมเดล เลื่อนซ้ายขวาได้">
+      <table>
+        <thead><tr><th>ครอบครัวโมเดล</th><th>ผู้พัฒนา</th><th>ภาพรวมสำหรับผู้เริ่มต้น</th><th>เริ่มจาก</th></tr></thead>
+        <tbody>
+          <tr><td>Llama 3.2</td><td>Meta</td><td>รุ่นเล็กสำหรับงานสนทนา สรุป และตามคำสั่งทั่วไป</td><td>1B หรือ 3B</td></tr>
+          <tr><td>Gemma 3</td><td>Google</td><td>มีรุ่นที่ทำงานกับข้อความและภาพ เหมาะกับการทดลองสื่อภาพ</td><td>1B หรือ 4B</td></tr>
+          <tr><td>Qwen3</td><td>Alibaba Cloud</td><td>มีหลายขนาด เหมาะกับงานทั่วไปและงานที่ต้องการคำตอบเป็นระบบ</td><td>1.7B หรือ 4B</td></tr>
+          <tr><td>Mistral</td><td>Mistral AI</td><td>โมเดลข้อความแบบ instruction-following ที่เป็นที่รู้จัก</td><td>7B เมื่อเครื่องพร้อม</td></tr>
+          <tr><td>Phi-4</td><td>Microsoft</td><td>เน้นการใช้เหตุผลและข้อความภาษาอังกฤษ แต่ขนาดใหญ่กว่า</td><td>14B เมื่อเครื่องพร้อมมาก</td></tr>
+          <tr><td>DeepSeek-R1</td><td>DeepSeek</td><td>มีรุ่นเล็กสำหรับทดลองการให้เหตุผลทีละขั้น</td><td>1.5B</td></tr>
+          <tr><td>Nemotron 3 Nano</td><td>NVIDIA</td><td>งานใช้เหตุผลและ agentic workflow; รุ่น 4B รันในเครื่องได้ รุ่น 30B ใช้ cloud สำหรับการสาธิต</td><td>4B local / 30B cloud</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="meta">คาบนี้ไม่จัดอันดับว่าโมเดลใด “ดีที่สุด” เพราะคุณภาพขึ้นกับงาน ภาษา เครื่อง PC และวิธีเขียน prompt ให้ทดลองงานเดียวกันกับโมเดลที่อาจารย์อนุญาต แล้ววิจารณ์ผลด้วยตนเอง</p>
+
+    <h2>4. สนทนาครั้งแรกและจุดตรวจ</h2>
+    <p>หลังรันโมเดลที่เลือกแล้ว รอให้เครื่องดาวน์โหลดเสร็จ หน้าจอจะเข้าสู่ chat ให้พิมพ์ prompt ใน <strong>บัตร prompt</strong> ด้านล่าง ไม่ต้องพิมพ์ prompt นี้ใน PowerShell ก่อนเปิดโมเดล</p>
+
+    <article class="copy-card prompt-card">
+      <div class="copy-card-top">
+        <div><span class="card-label">Prompt card · First chat</span><h3>ทดลองให้ AI อธิบาย Local AI</h3></div>
+        <button class="copy-card-button" type="button" data-copy-card>คัดลอก</button>
+      </div>
+      <pre data-copy-source><code>คุณเป็นผู้ช่วยสอนที่อธิบายเรื่อง AI สำหรับนิสิตปี 1
+
+อธิบายว่า “AI ในเครื่อง (local AI)” คืออะไร
+
+เงื่อนไข:
+- ใช้ภาษาไทย และใส่คำศัพท์อังกฤษในวงเล็บเมื่อจำเป็น
+- ไม่เกิน 5 bullet points
+- บอก 1 ข้อดี และ 1 ข้อจำกัด
+- จบด้วยคำถามตรวจความเข้าใจ 2 ข้อ</code></pre>
+      <p class="card-note"><strong>สังเกต:</strong> คำตอบมีภาษาและจำนวนข้อที่เรากำหนดหรือไม่? ถ้าไม่ ให้ปรับ prompt แล้วลองอีกครั้ง</p>
+    </article>
+
+    <article class="copy-card command-card">
+      <div class="copy-card-top">
+        <div><span class="card-label">Command card · Checkpoint B</span><h3>ดูว่ามีโมเดลใดอยู่ในเครื่อง</h3></div>
+        <button class="copy-card-button" type="button" data-copy-card>คัดลอก</button>
+      </div>
+      <pre data-copy-source><code>ollama ls</code></pre>
+      <p class="card-note"><strong>ผ่าน:</strong> เห็นชื่อโมเดลที่คุณเลือกอยู่ในรายการ</p>
+    </article>
+
+    <h2>5. เขียน prompt ให้ AI เข้าใจ</h2>
+    <p>ใช้โครง 6 ส่วนนี้ทุกครั้ง ไม่จำเป็นต้องเขียนหัวข้อภาษาอังกฤษเสมอไป แต่ต้องให้ข้อมูลครบเท่าที่งานต้องการ</p>
+
+    <div class="lesson-grid">
+      <article class="learning-card"><span class="term-label">1 · Role / บทบาท</span><h3>AI ควรช่วยในฐานะใคร?</h3><p>เช่น ครูดนตรี ผู้ช่วยค้นคว้า บรรณาธิการ หรือผู้ช่วยออกแบบ</p></article>
+      <article class="learning-card"><span class="term-label">2 · Task / งาน</span><h3>อยากให้ทำอะไรหนึ่งอย่าง?</h3><p>เช่น สร้างตาราง อธิบาย เปรียบเทียบ วิจารณ์ หรือเสนอทางเลือก</p></article>
+      <article class="learning-card"><span class="term-label">3 · Context / บริบท</span><h3>อะไรที่ AI ต้องรู้ก่อนตอบ?</h3><p>ระดับผู้เรียน วิชา เครื่องดนตรี ช่วงเวลาหรือเอกสารที่กำลังทำ</p></article>
+      <article class="learning-card"><span class="term-label">4 · Constraints / ข้อจำกัด</span><h3>ห้ามทำอะไร หรือจำกัดอย่างไร?</h3><p>จำนวนคำ ภาษา เวลา งบประมาณ และสิ่งที่ไม่ควรสมมติ</p></article>
+      <article class="learning-card"><span class="term-label">5 · Output / รูปแบบผลลัพธ์</span><h3>ต้องการผลลัพธ์หน้าตาแบบไหน?</h3><p>ตาราง checklist 5 bullet points หรือข้อความสองย่อหน้า</p></article>
+      <article class="learning-card"><span class="term-label">6 · Check / การตรวจ</span><h3>ต้องให้ AI แสดงความไม่แน่ใจไหม?</h3><p>ขอให้ระบุข้อสมมติ สิ่งที่ต้องตรวจแหล่ง และคำถามต่อยอด</p></article>
+    </div>
+
+    <h3>ประเภทของ prompt ที่ควรรู้</h3>
+    <div class="lesson-grid">
+      <article class="learning-card"><h3>Direct instruction / คำสั่งตรง</h3><p>ขอหนึ่งงานที่ชัด เช่น ย่อเนื้อหาเป็น 5 ข้อ</p></article>
+      <article class="learning-card"><h3>Role prompt / กำหนดบทบาท</h3><p>กำหนดความเชี่ยวชาญและกลุ่มผู้อ่านที่ AI ต้องคำนึงถึง</p></article>
+      <article class="learning-card"><h3>Context-rich / ให้บริบท</h3><p>วางโน้ตหรือเงื่อนไขจริง เพื่อไม่ให้ AI เดาแทนเรา</p></article>
+      <article class="learning-card"><h3>Structured output / ผลลัพธ์มีโครง</h3><p>ขอตาราง JSON checklist หรือ rubric เพื่อใช้งานต่อได้</p></article>
+      <article class="learning-card"><h3>Few-shot / มีตัวอย่าง</h3><p>ให้ตัวอย่างหนึ่งหรือสองชิ้น แล้วให้ AI ทำตามรูปแบบนั้น</p></article>
+      <article class="learning-card"><h3>Iterative / ปรับเป็นรอบ</h3><p>อ่านข้อความรอบแรก บอกสิ่งที่ไม่ตรง แล้วขอฉบับแก้ ไม่คาดหวังว่ารอบแรกสมบูรณ์</p></article>
+      <article class="learning-card"><h3>Critique / วิพากษ์</h3><p>ให้ AI หาจุดไม่ชัด แต่เราเป็นผู้ตัดสินว่าคำวิจารณ์ใดใช้ได้</p></article>
+      <article class="learning-card"><h3>Socratic / ถามกลับเพื่อเรียน</h3><p>ขอให้ AI ถามคำถามนำทางก่อนเฉลย เพื่อช่วยฝึกคิด</p></article>
+    </div>
+
+    <h2>6. Prompt cards · เลือกลองอย่างน้อย 3 ใบ</h2>
+    <p>แทนข้อความในวงเล็บเหลี่ยมด้วยข้อมูลจริงของคุณ ทุกใบเป็นเพียงร่างเริ่มต้น ให้ปรับภาษาหรือเงื่อนไขแล้วบันทึกสิ่งที่เปลี่ยน</p>
+
+    <article class="copy-card prompt-card">
+      <div class="copy-card-top"><div><span class="card-label">Prompt card · Music practice</span><h3>ผู้ช่วยวางแผนฝึกดนตรี</h3></div><button class="copy-card-button" type="button" data-copy-card>คัดลอก</button></div>
+      <pre data-copy-source><code>คุณเป็นครูสอน [เครื่องดนตรี/เสียงร้อง] ที่ระมัดระวัง
+
+งาน: สร้างแผนฝึก 20 นาทีสำหรับวันนี้
+บริบท: ฉันกำลังฝึก [บทเพลง/ทักษะ] และติดปัญหา [อธิบายปัญหาที่สังเกตได้]
+ข้อจำกัด: ฉันมีเวลา 20 นาที และไม่ต้องการคำแนะนำที่เสี่ยงต่อร่างกาย
+รูปแบบ: ตาราง เวลา | กิจกรรม | สิ่งที่ต้องฟัง/สังเกต
+การตรวจ: ระบุข้อเสนอแนะที่ฉันควรถามครูผู้สอนจริงก่อนนำไปใช้</code></pre>
+      <p class="card-note">AI ช่วยร่างได้ แต่ไม่ได้ฟังการเล่นจริงจากข้อความนี้ อย่าใช้แทนคำแนะนำจากครูหรือผู้เชี่ยวชาญด้านสุขภาพ</p>
+    </article>
+
+    <article class="copy-card prompt-card">
+      <div class="copy-card-top"><div><span class="card-label">Prompt card · Teaching</span><h3>ผู้ช่วยออกแบบกิจกรรมสอน</h3></div><button class="copy-card-button" type="button" data-copy-card>คัดลอก</button></div>
+      <pre data-copy-source><code>คุณเป็นผู้ช่วยครูผู้สอนดนตรี
+
+งาน: ออกแบบกิจกรรมเรียนรู้ 15 นาทีเรื่อง [หัวข้อ]
+ผู้เรียน: [อายุ/ระดับ]
+บริบท: ห้องมี [จำนวน] คน และมีอุปกรณ์ [รายการ]
+ข้อจำกัด: ใช้ภาษาง่าย ไม่ใช้การท่องจำอย่างเดียว และไม่ต้องซื้อวัสดุเพิ่ม
+รูปแบบ: วัตถุประสงค์ 2 ข้อ | ขั้นกิจกรรม | คำถามสะท้อนคิด | วิธีตรวจความเข้าใจ
+การตรวจ: บอก 2 จุดที่ครูควรปรับให้เข้ากับชั้นเรียนจริง</code></pre>
+      <p class="card-note">ใช้เป็นร่างเพื่อคิดกิจกรรม แล้วครูผู้สอนเป็นผู้ตรวจความเหมาะสมของเนื้อหาและผู้เรียน</p>
+    </article>
+
+    <article class="copy-card prompt-card">
+      <div class="copy-card-top"><div><span class="card-label">Prompt card · Research</span><h3>ผู้ช่วยเริ่มต้นการค้นคว้า</h3></div><button class="copy-card-button" type="button" data-copy-card>คัดลอก</button></div>
+      <pre data-copy-source><code>คุณเป็นผู้ช่วยวางแผนการค้นคว้า ไม่ใช่ผู้สร้างแหล่งอ้างอิง
+
+หัวข้อที่ฉันสนใจ: [หัวข้อ]
+งาน: เสนอคำถามวิจัย 4 ข้อ และคำค้นภาษาไทย/อังกฤษที่ใช้ค้นแหล่งจริงได้
+ข้อจำกัด: ห้ามสร้างชื่อบทความ ผู้แต่ง DOI หรือสถิติขึ้นมาเอง
+รูปแบบ: ตาราง คำถาม | คำค้นไทย | คำค้นอังกฤษ | แหล่งประเภทที่ควรตรวจ
+การตรวจ: ปิดท้ายด้วย checklist 5 ข้อสำหรับตรวจความน่าเชื่อถือของแหล่ง</code></pre>
+      <p class="card-note">AI อาจแต่งข้อเท็จจริงหรืออ้างอิงผิดได้ ต้องค้นและเปิดอ่านแหล่งจริงทุกครั้งก่อนใช้ในงาน</p>
+    </article>
+
+    <article class="copy-card prompt-card">
+      <div class="copy-card-top"><div><span class="card-label">Prompt card · Artwork</span><h3>ผู้ช่วยพัฒนาแนวคิดงานศิลปะ</h3></div><button class="copy-card-button" type="button" data-copy-card>คัดลอก</button></div>
+      <pre data-copy-source><code>คุณเป็นผู้ช่วยระดมความคิดสำหรับงานศิลปะร่วมสมัย
+
+ธีม: [เช่น ความทรงจำของเสียงในเมือง]
+วัสดุหรือข้อจำกัด: [วัสดุ/พื้นที่/งบประมาณ]
+ผู้ชม: [กลุ่มผู้ชม]
+งาน: เสนอแนวคิด 3 ทางเลือกที่ต่างกันจริง
+รูปแบบ: ชื่อผลงาน | ประสบการณ์ของผู้ชม | วัสดุ | คำถามเชิงจริยธรรม 1 ข้อ
+การตรวจ: อย่าอ้างว่าแนวคิดใดเป็นต้นฉบับที่สุด และอย่าเลียนแบบศิลปินที่ระบุชื่อ</code></pre>
+      <p class="card-note">ใช้ AI เพื่อแตกทางเลือก ไม่ใช่เพื่อทดแทนการตัดสินใจด้านความหมาย วัสดุ และลิขสิทธิ์ของผู้สร้าง</p>
+    </article>
+
+    <article class="copy-card prompt-card">
+      <div class="copy-card-top"><div><span class="card-label">Prompt card · Human-in-the-loop agent</span><h3>ใช้ AI เป็นผู้ช่วยทำงานหลายขั้นอย่างปลอดภัย</h3></div><button class="copy-card-button" type="button" data-copy-card>คัดลอก</button></div>
+      <pre data-copy-source><code>คุณเป็น planning agent ที่ทำงานภายใต้การอนุมัติของฉัน
+
+เป้าหมาย: [เช่น สร้างแผนฝึก 7 วัน / ออกแบบกิจกรรมสอน 15 นาที]
+บริบท: [ข้อมูลจริงที่จำเป็น]
+ข้อจำกัด: ห้ามสร้างข้อเท็จจริงหรือแหล่งอ้างอิง ห้ามตัดสินใจแทนฉัน และห้ามทำขั้นถัดไปเอง
+
+รอบนี้ทำเพียง 3 อย่าง:
+1) เสนอแผนงานไม่เกิน 4 ขั้น
+2) บอกผลลัพธ์ที่คาดว่าจะได้ของแต่ละขั้น
+3) บอกจุดที่ฉันต้องตรวจหรืออนุมัติก่อนทำต่อ
+
+หยุดและรอให้ฉันตอบว่า APPROVE STEP [หมายเลข] ก่อนทำขั้นนั้น</code></pre>
+      <p class="card-note"><strong>ใช้จริง:</strong> อ่านแผนก่อนอนุมัติทุกครั้ง หลังจบแต่ละขั้น ให้ขอหลักฐานหรือสรุปสิ่งที่เปลี่ยน แล้วบันทึกการตัดสินใจของคุณ</p>
+    </article>
+
+    <h2>7. เลือก mini-project แบบ agentic</h2>
+    <p>ทำคนเดียวหรือเป็นคู่ เลือกหนึ่งโครงการด้านล่าง ใช้ prompt อย่างน้อย 3 รอบ และทำ agent log: เป้าหมาย → แผนที่ AI เสนอ → สิ่งที่คุณอนุมัติ → ผลที่ตรวจ → สิ่งที่แก้</p>
+    <div class="project-grid">
+      <article class="learning-card"><span class="term-label">Project 01</span><h3>Music Practice Coach</h3><p>ทำแผนฝึก 7 วันสำหรับเป้าหมายจริง พร้อมสิ่งที่ต้องวัดและสิ่งที่ไม่ควรทำเกินเวลา</p></article>
+      <article class="learning-card"><span class="term-label">Project 02</span><h3>Micro-teaching Kit</h3><p>ออกแบบกิจกรรมสอน 15 นาที พร้อมคำถามชวนคิดและวิธีเช็กความเข้าใจ</p></article>
+      <article class="learning-card"><span class="term-label">Project 03</span><h3>Research Starter Agent</h3><p>สร้างคำถามวิจัย คำค้น และ checklist ประเมินแหล่งข้อมูล โดยคุณเป็นผู้เปิดและตรวจแหล่งจริง</p></article>
+      <article class="learning-card"><span class="term-label">Project 04</span><h3>Artwork Concept Pack</h3><p>พัฒนาแนวคิดงานศิลปะ 3 ทาง พร้อมวัสดุ ประสบการณ์ผู้ชม และข้อควรระวังเชิงจริยธรรม</p></article>
+      <article class="learning-card"><span class="term-label">Project 05</span><h3>Study Guide</h3><p>เปลี่ยนโน้ตที่คุณเขียนเองเป็นคำศัพท์ flashcards และแบบทดสอบที่ตรวจความเข้าใจ</p></article>
+      <article class="learning-card"><span class="term-label">Project 06</span><h3>Event Planner Agent</h3><p>วางโครงกิจกรรมดนตรี/ศิลปะเล็ก ๆ: เป้าหมาย กลุ่มผู้ชม งานที่ต้องทำ ความเสี่ยง และจุดอนุมัติ</p></article>
+    </div>
+
+    <h2>8. AI ช่วยอะไรได้ · และอะไรที่ต้องเป็นมนุษย์</h2>
+    <div class="lesson-grid">
+      <article class="learning-card">
+        <span class="term-label">AI ช่วยได้</span>
+        <h3>ร่าง · วางแผน · จัดระบบ · ตรวจตาม checklist</h3>
+        <p>ช่วยสรุปโน้ต ร่างตารางฝึก เขียนคำถามสอน แตกคำค้น เปรียบเทียบแนวคิดงานศิลปะ ปรับภาษา และเสนอขั้นตอนทำงานได้</p>
+      </article>
+      <article class="learning-card">
+        <span class="term-label">มนุษย์ต้องรับผิดชอบ</span>
+        <h3>อนุมัติ · ตรวจความจริง · ตัดสินใจ · รับผิดชอบผล</h3>
+        <p>คุณต้องอนุมัติแต่ละขั้น ตรวจแหล่งข้อมูล ฟังและตัดสินใจเรื่องดนตรี ดูความเหมาะสมกับผู้เรียน เคารพลิขสิทธิ์ และไม่ส่งคำตอบ AI ทั้งก้อนเป็นงานของตนเอง</p>
+      </article>
+      <article class="learning-card">
+        <span class="term-label">อย่าใช้เป็น</span>
+        <h3>แพทย์ ทนาย หรือแหล่งอ้างอิงสุดท้าย</h3>
+        <p>อย่าพึ่งพา AI สำหรับคำแนะนำสุขภาพ กฎหมาย การเงิน หรือข้อเท็จจริงสำคัญโดยไม่ตรวจผู้เชี่ยวชาญและแหล่งที่น่าเชื่อถือ</p>
+      </article>
+      <article class="learning-card">
+        <span class="term-label">Local ≠ perfect privacy</span>
+        <h3>ข้อมูลอยู่ในเครื่อง แต่ยังต้องคิดก่อนแชร์</h3>
+        <p>การรัน local ลดการส่งข้อความไปบริการ cloud แต่ไม่ควรวางข้อมูลส่วนตัวของผู้อื่น งานลับ หรือเนื้อหาที่ไม่มีสิทธิ์เผยแพร่ลงในระบบโดยไม่จำเป็น</p>
+      </article>
+    </div>
+
+    <h2>9. คำสั่งดูแลโมเดลหลังจบคาบ</h2>
+    <p>คำสั่งเหล่านี้ใช้ใน PowerShell <strong>หลังออกจาก chat</strong> ใช้เฉพาะเมื่อเข้าใจผลที่จะเกิดขึ้น โดยเฉพาะการลบโมเดล</p>
+    <div class="lesson-grid">
+      <article class="copy-card command-card">
+        <div class="copy-card-top"><div><span class="card-label">Command card</span><h3>ดูรายชื่อโมเดล</h3></div><button class="copy-card-button" type="button" data-copy-card>คัดลอก</button></div>
+        <pre data-copy-source><code>ollama ls</code></pre>
+        <p class="card-note">แสดงโมเดลที่ดาวน์โหลดไว้</p>
+      </article>
+      <article class="copy-card command-card">
+        <div class="copy-card-top"><div><span class="card-label">Command card</span><h3>ดูโมเดลที่กำลังทำงาน</h3></div><button class="copy-card-button" type="button" data-copy-card>คัดลอก</button></div>
+        <pre data-copy-source><code>ollama ps</code></pre>
+        <p class="card-note">ดูว่า model ใดยังใช้หน่วยความจำอยู่</p>
+      </article>
+      <article class="copy-card command-card">
+        <div class="copy-card-top"><div><span class="card-label">Command card</span><h3>หยุดโมเดล</h3></div><button class="copy-card-button" type="button" data-copy-card>คัดลอก</button></div>
+        <pre data-copy-source><code>ollama stop llama3.2:1b</code></pre>
+        <p class="card-note">เปลี่ยนชื่อโมเดลให้ตรงกับโมเดลที่คุณกำลังใช้</p>
+      </article>
+      <article class="copy-card command-card">
+        <div class="copy-card-top"><div><span class="card-label">Command card · ระวัง</span><h3>ลบโมเดลเพื่อคืนพื้นที่</h3></div><button class="copy-card-button" type="button" data-copy-card>คัดลอก</button></div>
+        <pre data-copy-source><code>ollama rm llama3.2:1b</code></pre>
+        <p class="card-note">ลบไฟล์โมเดลจากเครื่อง ต้องดาวน์โหลดใหม่หากต้องการใช้ภายหลัง</p>
+      </article>
+    </div>
+
+    <h2>10. ถ้าเจอปัญหา</h2>
+    <div class="details-stack">
+      <details>
+        <summary>พิมพ์คำสั่งแล้วขึ้นว่าไม่รู้จัก Ollama</summary>
+        <p>ปิด PowerShell แล้วเปิดใหม่ก่อน หากยังไม่สำเร็จ ให้เปิด Ollama จาก Start menu หรือเรียก TA ตรวจการติดตั้ง อย่าดาวน์โหลดตัวติดตั้งซ้ำหลายรอบ</p>
+      </details>
+      <details>
+        <summary>ดาวน์โหลดโมเดลช้า หรือเครื่องดูเหมือนค้าง</summary>
+        <p>โมเดลเป็นไฟล์ขนาดใหญ่ ให้ดูว่ายังมีแถบความคืบหน้าหรือไม่ รอและแจ้ง TA หากหยุดนานผิดปกติ อย่ากดดาวน์โหลดโมเดลใหม่ซ้อนกัน</p>
+      </details>
+      <details>
+        <summary>คำตอบของ AI ผิด หรือไม่ทำตามรูปแบบที่ขอ</summary>
+        <p>อย่าเพิ่งเชื่อหรือคัดลอก ให้เติมบริบท ระบุข้อจำกัด และบอกรูปแบบผลลัพธ์อีกครั้ง จากนั้นตรวจคำตอบด้วยตนเองหรือแหล่งจริง</p>
+      </details>
+      <details>
+        <summary>พื้นที่ดิสก์ไม่พอ</summary>
+        <p>ใช้โมเดลเล็กที่สุดที่อาจารย์อนุญาต หรือให้ TA ดูแลการลบโมเดลเก่าที่ไม่จำเป็น ห้ามลบไฟล์ของผู้อื่นหรือไฟล์ระบบ</p>
+      </details>
+    </div>
+
+    <section class="check-panel" aria-labelledby="exit-check-title">
+      <h2 id="exit-check-title">ก่อนออกจากห้อง: Exit checklist</h2>
+      <ul class="task-list">
+        <li><label><input type="checkbox" /> ฉันผ่านจุดตรวจการติดตั้ง และเห็นหมายเลขเวอร์ชันของ Ollama</label></li>
+        <li><label><input type="checkbox" /> ฉันดาวน์โหลดและรันโมเดลฟรีในเครื่องเพียง 1 โมเดล</label></li>
+        <li><label><input type="checkbox" /> ฉันอธิบายได้ว่า local model ของนักศึกษาต่างจาก cloud demonstration ของอาจารย์อย่างไร</label></li>
+        <li><label><input type="checkbox" /> ฉันมี prompt อย่างน้อย 3 ใบ และปรับอย่างน้อย 1 ใบหลังเห็นคำตอบจริง</label></li>
+        <li><label><input type="checkbox" /> ฉันทำ agent log ที่มี goal, plan, approval, verification และสิ่งที่ฉันตัดสินใจเอง</label></li>
+        <li><label><input type="checkbox" /> ฉันบันทึกว่าฉันเลือกโมเดลใด ใช้ AI ช่วยอะไร และฉันตรวจ/แก้เองตรงไหน</label></li>
+        <li><label><input type="checkbox" /> ฉันรู้ว่า AI อาจตอบผิด และจะไม่ใช้อ้างอิงหรือส่งงานโดยไม่ตรวจ</label></li>
+      </ul>
+    </section>
+
+    <h2>แหล่งอ้างอิงและอ่านต่อ</h2>
+    <ul class="link-list">
+      <li><a href="https://ollama.com/download/windows" target="_blank" rel="noopener noreferrer">Ollama · Download for Windows</a> — ตัวติดตั้งอย่างเป็นทางการสำหรับ Windows 11</li>
+      <li><a href="https://docs.ollama.com/windows" target="_blank" rel="noopener noreferrer">Ollama · Windows documentation</a> — ความต้องการระบบ ตำแหน่งเก็บโมเดล และการแก้ปัญหา</li>
+      <li><a href="https://docs.ollama.com/cli" target="_blank" rel="noopener noreferrer">Ollama · CLI reference</a> — คำสั่ง run, pull, list, stop และ remove</li>
+      <li><a href="https://docs.ollama.com/cloud" target="_blank" rel="noopener noreferrer">Ollama · Cloud documentation</a> — การลงชื่อเข้าใช้และการใช้ cloud model สำหรับการสาธิต</li>
+      <li><a href="https://ollama.com/library" target="_blank" rel="noopener noreferrer">Ollama · Model library</a> — ตรวจขนาด model, รุ่น และใบอนุญาตล่าสุดก่อนเลือกใช้</li>
+    </ul>
+  </template>
+
+  <footer data-site-footer></footer>
+  <script src="../js/course-data.js"></script>
+  <script src="../js/layout.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

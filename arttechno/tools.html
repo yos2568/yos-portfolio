@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>เครื่องมือฟรี · ศิลปะและเทคโนโลยี</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/motion.js"></script>
+</head>
+<body data-base="." data-page="tools">
+  <a class="skip-link" href="#main-content">ข้ามไปยังเนื้อหา</a>
+  <header data-site-header></header>
+  <main id="main-content" class="main">
+    <p class="kicker">Free tool stack</p>
+    <h1>ชุดเครื่องมือฟรี</h1>
+    <p class="lead">ตรวจโควตา free tier อีกครั้งก่อนเปิดภาค · ใช้บนเบราว์เซอร์ Windows ในแล็บได้เป็นหลัก</p>
+
+    <div class="callout callout-warn">
+      <strong>กฎสำคัญ</strong>
+      free tier เท่านั้น · ไม่บังคับ subscription · เตรียมเครื่องมือสำรองเสมอเมื่อโควตาหมด · ไม่ระบุตัวเลขโควตาที่ยังไม่ยืนยัน
+    </div>
+
+    <div data-tools>
+      <p class="meta">กำลังโหลด…</p>
+    </div>
+
+    <h2>กฎ vibe coding (สร้างเครื่องมือ HTML)</h2>
+    <ol>
+      <li>เขียนเจตนาทางดนตรีให้ชัด (ไทยหรืออังกฤษ)</li>
+      <li>วาง prompt ภาษาอังกฤษที่มีโครงสร้างลงใน LLM → ได้ HTML</li>
+      <li>บันทึกเป็นไฟล์เดียว → เปิดในเบราว์เซอร์ → ทดสอบ</li>
+      <li>รายงานบั๊ก/สิ่งที่ต้องการด้วยภาษาคน → prompt รอบถัดไป</li>
+      <li>เก็บรุ่น เช่น <code>tool-v1.html</code>, <code>tool-v2.html</code> บน Drive</li>
+    </ol>
+
+    <h2>โครง prompt ที่ใช้ซ้ำ</h2>
+    <pre class="prompt-box" data-prompt-pattern></pre>
+
+    <h2>โครงสร้างโฟลเดอร์ Drive แนะนำ</h2>
+    <pre class="prompt-box" data-drive-struct></pre>
+  </main>
+  <footer data-site-footer></footer>
+  <script src="js/course-data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

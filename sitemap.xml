@@ -26,6 +26,11 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://yos.in.th/arttechno/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://yos.in.th/tofu/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

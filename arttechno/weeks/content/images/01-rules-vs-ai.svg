@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 420" role="img" aria-labelledby="t1 d1">
+  <title id="t1">โปรแกรมแบบกฎ vs AI ที่เรียนรู้จากข้อมูล</title>
+  <desc id="d1">เปรียบเทียบโปรแกรมที่มนุษย์เขียนกฎทีละข้อ กับ AI ที่หาแบบแผนจากข้อมูล</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1118"/>
+      <stop offset="100%" stop-color="#1a2836"/>
+    </linearGradient>
+    <filter id="soft" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect width="920" height="420" rx="24" fill="url(#bg)"/>
+  <text x="460" y="48" text-anchor="middle" fill="#f0e6d0" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="22" font-weight="700">สองทางที่คอมพิวเตอร์ “ทำงานฉลาด”</text>
+  <text x="460" y="76" text-anchor="middle" fill="#8aa0b2" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="14">บทที่ 1 · ศิลปะและเทคโนโลยี</text>
+
+  <!-- Left card -->
+  <g filter="url(#soft)">
+    <rect x="48" y="110" width="380" height="250" rx="18" fill="#141d27" stroke="#3a4a5a" stroke-width="1.5"/>
+  </g>
+  <rect x="48" y="110" width="380" height="48" rx="18" fill="#176f8a"/>
+  <rect x="48" y="140" width="380" height="18" fill="#176f8a"/>
+  <text x="238" y="142" text-anchor="middle" fill="#fff" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="17" font-weight="700">โปรแกรมแบบกฎ</text>
+  <text x="238" y="190" text-anchor="middle" fill="#c5d4e0" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="15">มนุษย์เขียนกฎทีละข้อ</text>
+  <text x="238" y="222" text-anchor="middle" fill="#8aa0b2" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="14">“ถ้าฝนตก → เปิดร่ม”</text>
+  <text x="238" y="258" text-anchor="middle" fill="#c5d4e0" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="14">ทำตามสคริปต์ที่กำหนดไว้</text>
+  <text x="238" y="290" text-anchor="middle" fill="#c5d4e0" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="14">ผิด = บั๊กในโค้ด</text>
+  <text x="238" y="330" text-anchor="middle" fill="#7ec8dc" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="13" font-weight="600">ตัวอย่าง: ไฟแดง · เครื่องคิดเลข</text>
+
+  <!-- VS -->
+  <circle cx="460" cy="235" r="28" fill="#9b6b16"/>
+  <text x="460" y="242" text-anchor="middle" fill="#fff" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="14" font-weight="800">VS</text>
+
+  <!-- Right card -->
+  <g filter="url(#soft)">
+    <rect x="492" y="110" width="380" height="250" rx="18" fill="#141d27" stroke="#3a4a5a" stroke-width="1.5"/>
+  </g>
+  <rect x="492" y="110" width="380" height="48" rx="18" fill="#9b6b16"/>
+  <rect x="492" y="140" width="380" height="18" fill="#9b6b16"/>
+  <text x="682" y="142" text-anchor="middle" fill="#fff" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="17" font-weight="700">AI / เรียนรู้จากข้อมูล</text>
+  <text x="682" y="190" text-anchor="middle" fill="#c5d4e0" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="15">หาแบบแผนจากตัวอย่างจำนวนมาก</text>
+  <text x="682" y="222" text-anchor="middle" fill="#8aa0b2" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="14">“เห็นสแปมหลายพันฉบับ → แยกสแปมได้”</text>
+  <text x="682" y="258" text-anchor="middle" fill="#c5d4e0" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="14">ทำนายจากแบบแผน ไม่ใช่กฎครบทุกกรณี</text>
+  <text x="682" y="290" text-anchor="middle" fill="#c5d4e0" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="14">ผิด = เดาผิด / มั่นใจแต่ผิดได้</text>
+  <text x="682" y="330" text-anchor="middle" fill="#e8c27a" font-family="Noto Sans Thai, Leelawadee UI, Tahoma, sans-serif" font-size="13" font-weight="600">ตัวอย่าง: แชทบอท · แนะนำเพลง</text>
+</svg>
