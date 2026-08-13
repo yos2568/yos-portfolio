@@ -884,6 +884,11 @@ button.module-card {
   font-family: var(--font-mono);
   font-size: 0.88em;
 }
+.lesson-markdown hr {
+  margin: 2.4em 0;
+  border: 0;
+  border-top: 1px solid var(--line-light);
+}
 .lesson-markdown blockquote {
   margin: 1.4em 0;
   padding: 0.2em 0 0.2em 1.1em;

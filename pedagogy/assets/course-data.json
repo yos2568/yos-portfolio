@@ -38,24 +38,22 @@
     {
       "week": 2,
       "date": "2026-08-10",
-      "topic": "ผู้เรียนเรียนรู้ดนตรีอย่างไร: ทฤษฎี แรงจูงใจ และความแตกต่าง",
-      "title": "ทฤษฎีเป็นเลนส์ ไม่ใช่ป้ายกำกับ",
-      "description": "เปรียบเทียบกรอบทฤษฎีการเรียนรู้ และลำดับ Attention → Learning → Memory แยกสิ่งที่สังเกตได้จากสมมติฐาน",
-      "activity": "โปรไฟล์ผู้เรียนสองเลนส์ · Gap คำถามเก็บข้อมูล",
+      "topic": "ปรัชญาและจิตวิทยาการศึกษาดนตรี: รากฐานของการสอนและการเรียนรู้",
+      "title": "ปรัชญาการศึกษา สู่จิตวิทยาการเรียนรู้ดนตรี",
+      "description": "บทที่ 1 จาก The Psychology of Teaching and Learning Music — ปรัชญาการศึกษา สำนักจิตวิทยาการศึกษาทั้งห้า และการเรียนรู้เชิงสืบเสาะที่เชื่อมทฤษฎีสู่การปฏิบัติจริงในห้องเรียนดนตรี",
+      "activity": "อ่านบทที่ 1 · ตอบคำถามท้ายบท 10 ข้อ",
       "category": "foundation",
-      "expertise": "Learning theory · Attention",
+      "expertise": "Philosophy of education · Educational psychology",
       "clo": [
         "CLO 1",
         "CLO 3",
         "CLO 6"
       ],
       "reading": [
-        "Psychology of Teaching and Learning Music — learning theories",
-        "Helding, The Musician’s Mind ch. 3"
+        "The Psychology of Teaching and Learning Music, บทที่ 1 (ฉบับแปลไทย)"
       ],
       "cards": [
-        "W2-A",
-        "W2-B"
+        "Ch. 1 — Philosophy & Educational Psychology"
       ],
       "displayDate": "10 ส.ค. 2569",
       "contentFile": "Week 2 - teaching content.md"
@@ -63,22 +61,22 @@
     {
       "week": 3,
       "date": "2026-08-17",
-      "topic": "จากผลลัพธ์สู่บทเรียน: วัตถุประสงค์ การจัดลำดับ และการประเมิน",
-      "title": "วัตถุประสงค์ที่สังเกตได้ และหลักฐานที่ตรงเป้า",
-      "description": "เขียน instructional objective ที่ประเมินได้ จับคู่หลักฐาน และเกณฑ์สั้นจาก Colwell & Hewitt",
-      "activity": "คู่ objective–evidence + mini rubric",
+      "topic": "ศิลปะแห่งการฝึกฝนดนตรีอย่างมีสติและเปี่ยมความหมาย",
+      "title": "10 ขั้นตอนการซ้อมแบบ Madeline Bruser",
+      "description": "จากความเปราะบางสู่ความเป็นเลิศ: การเตรียมกายและใจ กลไกสรีระตามธรรมชาติ การรับรู้บริสุทธิ์ และการเล่นดนตรีด้วยความเอื้ออารี ตามแนวทาง Madeline Bruser",
+      "activity": "ฝึกยืดเหยียดและหยั่งรากก่อนซ้อม · บันทึกสถานการณ์ดิ้นรน 1 แบบที่พบในตนเอง",
       "category": "foundation",
-      "expertise": "Objectives · Assessment",
+      "expertise": "Mindful practice · Body awareness",
       "clo": [
         "CLO 2",
-        "CLO 3"
+        "CLO 3",
+        "CLO 5"
       ],
       "reading": [
-        "Colwell & Hewitt ch. 2–3"
+        "Bruser, The Art of Practicing — คู่มือ 10 ขั้นตอน (สรุปฉบับแปลไทย)"
       ],
       "cards": [
-        "W3-A",
-        "W3-B"
+        "10 Steps — Bruser Practice Guide"
       ],
       "displayDate": "17 ส.ค. 2569",
       "contentFile": "Week 3 - teaching content.md"

@@ -75,6 +75,12 @@ function renderMarkdown(source) {
       continue;
     }
 
+    if (/^(-{3,}|\*{3,}|_{3,})$/.test(line)) {
+      blocks.push("<hr />");
+      index += 1;
+      continue;
+    }
+
     const headingMatch = line.match(/^(#{1,6})\s+(.+)$/);
     if (headingMatch) {
       const level = Math.min(headingMatch[1].length + 1, 6);
