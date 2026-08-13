@@ -440,6 +440,34 @@ async function main() {
   // Lesson viewer
   const lessonRoot = document.getElementById("lesson-root");
   let activeWeek = null;
+  let scrollLockY = 0;
+  let scrollLocked = false;
+
+  // overflow:hidden alone lets mobile Safari/Chrome render the fixed
+  // overlay anchored to the pre-scroll position instead of the visible
+  // viewport ("stuck near the bottom"). Freezing body position at the
+  // current scroll offset avoids that; unlockScroll restores it on close.
+  function lockScroll() {
+    if (scrollLocked) return;
+    scrollLocked = true;
+    scrollLockY = window.scrollY || window.pageYOffset || 0;
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollLockY}px`;
+    document.body.style.left = "0";
+    document.body.style.right = "0";
+    document.body.style.width = "100%";
+  }
+
+  function unlockScroll() {
+    if (!scrollLocked) return;
+    scrollLocked = false;
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.left = "";
+    document.body.style.right = "";
+    document.body.style.width = "";
+    window.scrollTo(0, scrollLockY);
+  }
 
   async function openWeek(n) {
     const week = weeks.find((w) => w.week === n);
@@ -457,19 +485,21 @@ async function main() {
               <span>WEEK ${String(week.week).padStart(2, "0")} · ${escapeHtml(week.displayDate || formatDate(week.date))}</span>
             </div>
           </header>
-          <div class="lesson-viewer-hero">
-            <p class="eyebrow">${escapeHtml(week.expertise)}</p>
-            <h1 id="lesson-viewer-title">${escapeHtml(week.title)}</h1>
-            <p>${escapeHtml(week.description)}</p>
-            <div class="lesson-viewer-chips">
-              <span>${escapeHtml((week.cards || []).join(" · "))}</span>
-              <span>${escapeHtml((week.clo || []).join(" · "))}</span>
-              <span>${escapeHtml(week.activity)}</span>
-            </div>
-            ${renderWeekResourceLinks(week.week)}
-          </div>
           <div class="lesson-viewer-body">
-            <p class="lesson-viewer-status">กำลังโหลดบทเรียน…</p>
+            <div class="lesson-viewer-hero">
+              <p class="eyebrow">${escapeHtml(week.expertise)}</p>
+              <h1 id="lesson-viewer-title">${escapeHtml(week.title)}</h1>
+              <p>${escapeHtml(week.description)}</p>
+              <div class="lesson-viewer-chips">
+                <span>${escapeHtml((week.cards || []).join(" · "))}</span>
+                <span>${escapeHtml((week.clo || []).join(" · "))}</span>
+                <span>${escapeHtml(week.activity)}</span>
+              </div>
+              ${renderWeekResourceLinks(week.week)}
+            </div>
+            <div class="lesson-viewer-article-slot">
+              <p class="lesson-viewer-status">กำลังโหลดบทเรียน…</p>
+            </div>
           </div>
           <footer class="lesson-viewer-footer">
             <button type="button" class="button button-ghost" data-nav="${week.week - 1}" ${week.week <= 1 ? "disabled" : ""}>← สัปดาห์ก่อน</button>
@@ -478,12 +508,12 @@ async function main() {
           </footer>
         </div>
       </div>`;
-    document.body.style.overflow = "hidden";
+    lockScroll();
     const url = new URL(window.location.href);
     url.searchParams.set("week", String(week.week));
     history.pushState({ week: week.week }, "", url);
 
-    const body = lessonRoot.querySelector(".lesson-viewer-body");
+    const body = lessonRoot.querySelector(".lesson-viewer-article-slot");
     try {
       const res = await fetch(weekMarkdownUrl(week.week));
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -497,7 +527,7 @@ async function main() {
   function closeWeek() {
     activeWeek = null;
     lessonRoot.innerHTML = "";
-    document.body.style.overflow = "";
+    unlockScroll();
     const url = new URL(window.location.href);
     url.searchParams.delete("week");
     history.pushState({}, "", url.pathname + url.search + url.hash);

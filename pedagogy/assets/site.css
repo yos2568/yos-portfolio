@@ -1139,7 +1139,6 @@ button.module-card {
   background: var(--paper);
 }
 .lesson-viewer-body .lesson-markdown {
-  min-height: 100%;
   border: 0;
   background: var(--paper-raised);
   padding: clamp(24px, 4vw, 48px);

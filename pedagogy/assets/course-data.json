@@ -29,6 +29,7 @@
         "Psychology of Teaching and Learning Music pp. 8–9"
       ],
       "cards": [
+        "บทที่ 1",
         "W1-A",
         "W1-B"
       ],
@@ -40,8 +41,8 @@
       "date": "2026-08-10",
       "topic": "ปรัชญาและจิตวิทยาการศึกษาดนตรี: รากฐานของการสอนและการเรียนรู้",
       "title": "ปรัชญาการศึกษา สู่จิตวิทยาการเรียนรู้ดนตรี",
-      "description": "บทที่ 1 จาก The Psychology of Teaching and Learning Music — ปรัชญาการศึกษา สำนักจิตวิทยาการศึกษาทั้งห้า และการเรียนรู้เชิงสืบเสาะที่เชื่อมทฤษฎีสู่การปฏิบัติจริงในห้องเรียนดนตรี",
-      "activity": "อ่านบทที่ 1 · ตอบคำถามท้ายบท 10 ข้อ",
+      "description": "บทที่ 2 (Chapter 1 ในต้นฉบับ) จาก The Psychology of Teaching and Learning Music — ปรัชญาการศึกษา สำนักจิตวิทยาการศึกษาทั้งห้า และการเรียนรู้เชิงสืบเสาะที่เชื่อมทฤษฎีสู่การปฏิบัติจริงในห้องเรียนดนตรี",
+      "activity": "อ่านบทที่ 2 · ตอบคำถามท้ายบท 10 ข้อ",
       "category": "foundation",
       "expertise": "Philosophy of education · Educational psychology",
       "clo": [
@@ -50,10 +51,10 @@
         "CLO 6"
       ],
       "reading": [
-        "The Psychology of Teaching and Learning Music, บทที่ 1 (ฉบับแปลไทย)"
+        "The Psychology of Teaching and Learning Music, Chapter 1 (ฉบับแปลไทย, บทที่ 2 ของรายวิชา)"
       ],
       "cards": [
-        "Ch. 1 — Philosophy & Educational Psychology"
+        "บทที่ 2 — Philosophy & Educational Psychology"
       ],
       "displayDate": "10 ส.ค. 2569",
       "contentFile": "Week 2 - teaching content.md"
@@ -76,7 +77,7 @@
         "Bruser, The Art of Practicing — คู่มือ 10 ขั้นตอน (สรุปฉบับแปลไทย)"
       ],
       "cards": [
-        "10 Steps — Bruser Practice Guide"
+        "บทที่ 3 — Bruser Practice Guide (10 Steps)"
       ],
       "displayDate": "17 ส.ค. 2569",
       "contentFile": "Week 3 - teaching content.md"
