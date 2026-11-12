@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="th" xml:lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Final Project · Wind Pedagogy 3503394</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    html { background: #fdfcf9; color: #1d1c1a; }
+    body {
+      max-width: 46rem;
+      padding: 24px 16px 64px;
+      font-family: "Noto Sans Thai", "Sarabun", "Thonburi", "Leelawadee UI", sans-serif;
+      font-size: 17px;
+      line-height: 1.75;
+      hyphens: none;
+    }
+    h1 { font-size: 1.75rem; line-height: 1.35; margin-top: 0.4em; }
+    h2 { font-size: 1.35rem; margin-top: 2em; padding-top: 0.6em; border-top: 1px solid #e4dfd4; }
+    h3 { font-size: 1.12rem; margin-top: 1.6em; }
+    a { color: #8a5a00; text-underline-offset: 2px; }
+    a:visited { color: #6e4800; }
+    .fp-back { font-size: 0.95rem; margin: 0 0 1rem; }
+    blockquote { margin: 1.2em 0; padding: 0.6em 1em; border-left: 4px solid #c99a2e; background: #fbf4e4; color: #3a3428; }
+    blockquote p { margin: 0.3em 0; }
+    table {
+      display: block;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border-collapse: collapse;
+      margin: 1em 0;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    th, td { border: 1px solid #e0dacd; padding: 0.45em 0.6em; vertical-align: top; text-align: left; }
+    th { background: #f3eee3; }
+    td { min-width: 7em; }
+    pre { background: #f5f2ea; padding: 0.9em 1em; border-radius: 6px; overflow-x: auto; white-space: pre-wrap; }
+    pre code { font-size: 0.9rem; }
+    ul.task-list { list-style: none; padding-left: 0.2em; }
+    ul.task-list li input { margin-right: 0.5em; }
+    :focus-visible { outline: 3px solid #c99a2e; outline-offset: 2px; }
+    @media (max-width: 600px) {
+      body { font-size: 16px; padding: 16px; }
+      h1 { font-size: 1.45rem; }
+    }
+    @media print {
+      .fp-back { display: none; }
+      table { display: table; overflow: visible; }
+    }
+  </style>
+</head>
+<body>
+<p class="fp-back"><a href="./">← กลับหน้ารายวิชา Wind Pedagogy</a></p>
+<h1 id="final-project-คลงความรครเครองลมของฉน">Final Project ·
+คลังความรู้ครูเครื่องลมของฉัน</h1>
+<p><strong>รายวิชา:</strong> 3503394 Wind Pedagogy<br />
+<strong>สัดส่วนคะแนน:</strong> งานนี้คิดเป็น <strong>40%
+ของคะแนนรวมรายวิชา</strong><br />
+<strong>รูปแบบงาน:</strong> ทำงานเดี่ยว<br />
+<strong>กำหนดส่ง:</strong> 20 พ.ย. 2026<br />
+<strong>ช่องทางส่ง:</strong> <a
+href="https://forms.gle/tJ7nyaeHxgDbMG7FA">แบบฟอร์มส่งงาน Final
+Project</a></p>
+<blockquote>
+<p>ใบงานนี้ใช้แทนใบงาน Final Project ฉบับวันที่ 5 พ.ย. 2026
+ถ้าเริ่มทำงานฉบับเดิมไปแล้ว นำงานมาใช้ต่อได้ ดูหัวข้อ “ถ้าเริ่มงานฉบับเดิมไปแล้ว”
+ท้ายใบงาน</p>
+</blockquote>
+<h2 id="จดประสงคของงาน">จุดประสงค์ของงาน</h2>
+<p>ให้นิสิตสร้าง <strong>คลังความรู้สำหรับการสอนเครื่องดนตรีของตนเอง</strong>
+ที่ใช้ต่อได้หลังจบวิชา โดยค้นหนังสือและงานวิชาการจากฐานข้อมูลของจุฬาฯ
+รวบรวมวิดีโอและประวัตินักดนตรี ถ่ายคลิปการสอนของตนเอง แล้วรวมทั้งหมดเป็นหน้าเว็บ HTML
+หนึ่งหน้า</p>
+<p>งานนี้ฝึกใช้ AI รุ่นฟรีช่วยค้น อ่าน ถาม และสร้างหน้าเว็บ แต่ <strong>AI
+ไม่ใช่แหล่งอ้างอิง</strong> ทุกชื่อหนังสือ ชื่อบทความ ปี และลิงก์
+นิสิตต้องเปิดตรวจกับต้นฉบับเอง</p>
+<p>ก่อนเริ่ม ให้กำหนด <strong>ผู้เรียนเป้าหมาย</strong> หนึ่งกลุ่ม เช่น
+“นักเรียนมัธยมต้นที่เรียนคลาริเน็ตมาแล้ว 6 เดือน”
+แล้วเลือกและเขียนทุกส่วนเพื่อผู้เรียนกลุ่มนี้</p>
+<h2 id="สงทตองมในหนาเวบ">สิ่งที่ต้องมีในหน้าเว็บ</h2>
+<p>หน้าแรกระบุชื่อผู้จัดทำ เครื่องดนตรี และผู้เรียนเป้าหมาย จากนั้นมี 6 ส่วน
+และรายการอ้างอิงท้ายหน้า</p>
+<table>
+<thead>
+<tr>
+<th>ส่วน</th>
+<th>จำนวน</th>
+<th>เกณฑ์</th>
+<th>คะแนน</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. ชั้นหนังสือครู</td>
+<td>3–5 เล่ม</td>
+<td>ก</td>
+<td>10 (รวมส่วน 1–2)</td>
+</tr>
+<tr>
+<td>2. งานวิชาการ</td>
+<td>2 ชิ้น</td>
+<td>ก</td>
+<td></td>
+</tr>
+<tr>
+<td>3. คลิปการสอนของฉัน</td>
+<td>1 คลิป ไม่เกิน 3 นาที</td>
+<td>ข</td>
+<td>10</td>
+</tr>
+<tr>
+<td>4. คลังวิดีโอการบรรเลง</td>
+<td>5 คลิป</td>
+<td>ค</td>
+<td>4</td>
+</tr>
+<tr>
+<td>5. Virtuoso เครื่องดนตรีของฉัน</td>
+<td>5 คน</td>
+<td>ง</td>
+<td>4</td>
+</tr>
+<tr>
+<td>6. บันทึกการใช้ AI</td>
+<td>ถามตอบ 3 ข้อ และตารางการใช้ AI</td>
+<td>จ</td>
+<td>7</td>
+</tr>
+<tr>
+<td>หน้าเว็บและรายการอ้างอิง</td>
+<td>ทั้งหน้า</td>
+<td>ฉ</td>
+<td>5</td>
+</tr>
+<tr>
+<td><strong>รวม</strong></td>
+<td></td>
+<td></td>
+<td><strong>40</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="สวนท-1-ชนหนงสอคร-35-เลม">ส่วนที่ 1 · ชั้นหนังสือครู (3–5 เล่ม)</h3>
+<ul>
+<li>อย่างน้อย <strong>1 เล่มเป็นหนังสืออ้างอิงเชิงวิชาการ</strong> เช่น ชุด
+<em>Cambridge Companions to Music</em> หรือ <em>Yale Musical Instrument
+Series</em>
+<ul>
+<li>บางเครื่องไม่มีเล่มของตัวเองในชุด Cambridge Companions เช่น ทรัมเป็ต ให้ใช้
+<em>The Cambridge Companion to Brass Instruments</em> หรือหนังสือชุดอื่น</li>
+</ul></li>
+<li>อย่างน้อย <strong>1 เล่มเป็นตำราการเล่นหรือการสอนเครื่องของตน</strong></li>
+<li>เล่มที่เหลือเลือกได้ตามสะดวก รวมถึงหนังสือที่ใช้ในรายวิชานี้</li>
+</ul>
+<p>แต่ละเล่มต้องมี</p>
+<ol type="1">
+<li>รายการอ้างอิงแบบ Chicago author-date และ ISBN</li>
+<li><strong>บรรณนิทัศน์</strong> ย่อหน้าสั้น 4–6 ประโยค บอกว่าหนังสือเล่มนี้คืออะไร
+บทใดใช้สอนเรื่องใดกับผู้เรียนเป้าหมาย และมีข้อจำกัดอะไร</li>
+<li>บทหรือเลขหน้าที่นิสิตอ่านจริง</li>
+</ol>
+<p><strong>ไม่ต้องอ่านทั้งเล่ม</strong> อ่านสารบัญและบทที่เกี่ยวกับการสอนอย่างน้อย 1
+บทก็พอ</p>
+<h3 id="สวนท-2-งานวชาการ-2-ชน">ส่วนที่ 2 · งานวิชาการ (2 ชิ้น)</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>ชิ้น</th>
+<th>แหล่งค้น</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ภาษาอังกฤษ 1 ชิ้น</td>
+<td>บทความวารสาร หรือวิทยานิพนธ์ระดับปริญญาเอก (DMA, PhD, EdD) จาก <a
+href="https://www.car.chula.ac.th/curef.php">Chula Reference
+Database</a> เช่น JSTOR, Oxford Journals, Cambridge Core, ProQuest
+Dissertations &amp; Theses Global</td>
+</tr>
+<tr>
+<td>ภาษาไทย 1 ชิ้น</td>
+<td>บทความจาก ThaiJO หรือวิทยานิพนธ์จาก TDC หรือ CUIR
+ถ้าไม่มีงานเรื่องการสอนเครื่องของตน ใช้งานเรื่องการสอนเครื่องลมทั่วไปได้</td>
+</tr>
+</tbody>
+</table>
+<p>เข้าฐานข้อมูลด้วยบัญชี CUNET ของตนเอง แต่ละชิ้นต้องมี</p>
+<ol type="1">
+<li>รายการอ้างอิงพร้อม DOI หรือลิงก์ถาวร</li>
+<li><strong>ภาพหน้าจอหน้ารายการ</strong> ในฐานข้อมูลที่ค้นพบ</li>
+<li>สรุป 4–6 ประโยค ว่าศึกษาอะไร พบอะไร</li>
+<li>ข้อค้นพบ 1 ข้อที่นำไปใช้สอนผู้เรียนเป้าหมายได้ และควรระวังอะไรเมื่อนำไปใช้</li>
+</ol>
+<p>บทความที่ใช้ในรายงานกลางภาคนำมาใช้ซ้ำได้ 1 ชิ้น</p>
+<h3 id="สวนท-3-คลปการสอนของฉน-1-คลป">ส่วนที่ 3 · คลิปการสอนของฉัน (1
+คลิป)</h3>
+<p>คลิปยาว <strong>ไม่เกิน 3 นาที</strong> สอนเรื่องเดียว โครงที่แนะนำคือ ปัญหา →
+สาธิต → ให้ผู้เรียนลองทำ → วิธีตรวจตัวเอง</p>
+<p>ใต้คลิปใส่ <strong>การ์ดบทเรียน 5 ช่อง</strong></p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>ช่อง</th>
+<th>ตอบคำถาม</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. เป้าหมาย</td>
+<td>หลังดูคลิป ผู้เรียนจะทำอะไรได้</td>
+</tr>
+<tr>
+<td>2. แนวคิดจากวิชา</td>
+<td>ใช้แนวคิดใดจากรายวิชา เช่น Four Ps, sound-before-symbol,
+Whole–Part–Whole, Simultaneous Learning</td>
+</tr>
+<tr>
+<td>3. ลำดับการสอน</td>
+<td>ครูทำอะไรก่อนหลัง</td>
+</tr>
+<tr>
+<td>4. กิจกรรมของผู้เรียน</td>
+<td>ผู้เรียนลงมือทำอะไร 2–3 ขั้น</td>
+</tr>
+<tr>
+<td>5. หลักฐานการเรียนรู้</td>
+<td>ครูหรือผู้เรียนฟังหรือสังเกตอะไร จึงรู้ว่าทำได้ตามเป้าหมาย</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>โพสต์บน TikTok, Instagram, YouTube หรือ Facebook ได้
+จะตั้งเป็นสาธารณะหรือให้ดูได้เฉพาะผู้มีลิงก์ก็ได้ <strong>คะแนนเท่ากัน</strong></li>
+<li>เก็บไฟล์ต้นฉบับไว้ในโฟลเดอร์ Drive ด้วย เพราะลิงก์บนแพลตฟอร์มอาจหาย</li>
+<li>ใช้เสียงเครื่องดนตรีของตนเอง ไม่ใส่เพลงที่มีลิขสิทธิ์เป็นเสียงประกอบ</li>
+<li>ถ้ามีบุคคลอื่นในคลิป ต้องได้รับความยินยอมก่อน</li>
+<li>ไม่มีคะแนนการตัดต่อ ถ่ายด้วยมือถือตัวเดียวได้</li>
+</ul>
+<h3 id="สวนท-4-คลงวดโอการบรรเลง-5-คลป">ส่วนที่ 4 · คลังวิดีโอการบรรเลง (5
+คลิป)</h3>
+<p>แต่ละคลิประบุ ชื่อผลงาน ผู้บรรเลง ลิงก์ <strong>นาทีที่ควรเริ่มดู</strong> และ
+<strong>สิ่งที่ผู้เรียนควรสังเกต</strong> 1–2 ประโยค เช่น ลักษณะเสียง การหายใจ
+ท่าทาง หรือการตัดวรรค</p>
+<p>ใช้คลิปจากช่องทางของศิลปิน วงดนตรี ค่ายเพลง หรือสถาบัน ไม่ใช้คลิปที่ผู้อื่นอัปโหลดซ้ำ</p>
+<h3 id="สวนท-5-virtuoso-เครองดนตรของฉน-5-คน">ส่วนที่ 5 · Virtuoso
+เครื่องดนตรีของฉัน (5 คน)</h3>
+<p>เลือกให้หลากหลาย คือมีทั้งนักดนตรีในอดีตและที่ยังมีชีวิต และไม่มาจากประเทศเดียวกันทั้งหมด
+แต่ละคนต้องมี</p>
+<ol type="1">
+<li><strong>รูป</strong> พร้อมเครดิตและสัญญาอนุญาตใต้ภาพ แนะนำ <a
+href="https://commons.wikimedia.org">Wikimedia Commons</a>
+ซึ่งระบุสัญญาอนุญาตไว้ทุกรูป ถ้าหารูปที่ใช้ได้ไม่พบ ให้ใส่ลิงก์ไปเว็บไซต์ทางการของนักดนตรีแทน
+<strong>ห้ามใช้รูปที่ AI สร้าง</strong></li>
+<li><strong>ประวัติ</strong> 4–6 ประโยค มีแหล่งอ้างอิง 2 แหล่ง</li>
+<li><strong>งานเด่น</strong> 1 ชิ้น พร้อมลิงก์ และเหตุผลที่ผู้เรียนควรฟัง</li>
+</ol>
+<h3 id="สวนท-6-บนทกการใช-ai">ส่วนที่ 6 · บันทึกการใช้ AI</h3>
+<p><strong>6.1 ถามตอบ 3 ข้อ</strong> ถามคำถามเรื่องการสอนเครื่องของตน
+แล้วตรวจคำตอบกับแหล่งต้นฉบับ</p>
+<table>
+<thead>
+<tr>
+<th>คำถาม</th>
+<th>AI ที่ใช้</th>
+<th>คำตอบโดยย่อ</th>
+<th>แหล่งที่ใช้ตรวจ (หน้า)</th>
+<th>ตรงหรือไม่ และแก้อะไร</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<p>อย่างน้อย <strong>1 ข้อต้องถาม AI 2 ตัวด้วยคำถามเดียวกัน</strong>
+แล้วเทียบว่าคำตอบต่างกันอย่างไรและตัวใดตรงกับแหล่งมากกว่า</p>
+<p><strong>6.2 ตารางการใช้ AI</strong> แคปเจอร์หน้าจอทุกครั้งที่สั่ง AI
+ให้เห็นทั้งคำสั่งและผล แล้วสรุปเป็นตาราง เหมือนรายงานกลางภาค</p>
+<table>
+<thead>
+<tr>
+<th>ลำดับ</th>
+<th>เครื่องมือ</th>
+<th>งานที่สั่ง</th>
+<th>ภาพหน้าจอ</th>
+<th>สิ่งที่ตรวจและแก้เอง</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<h2 id="ai-ทใชได">AI ที่ใช้ได้</h2>
+<p>ใช้ได้ทุกตัวในรายการนี้ <strong>เฉพาะรุ่นฟรี</strong> ไม่ต้องสมัครแพ็กเกจเสียเงิน
+จะใช้ตัวเดียวหรือหลายตัวก็ได้</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>งาน</th>
+<th>เครื่องมือที่เหมาะ</th>
+<th>ข้อควรรู้</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ค้นหาแหล่ง</td>
+<td>Perplexity, ChatGPT, Claude, Gemini (โหมดค้นเว็บ)</td>
+<td>AI ให้ลิงก์มาได้ แต่บางรายการไม่มีอยู่จริง ต้องเปิดตรวจทุกรายการ</td>
+</tr>
+<tr>
+<td>ถามตอบจากแหล่งที่อ่าน</td>
+<td><strong>Gemini Notebook (NotebookLM)</strong> แนะนำ
+เพราะตอบพร้อมเลขอ้างอิงที่กดไปดูต้นฉบับได้ หรือใช้ Projects ของ Claude หรือ
+ChatGPT</td>
+<td>ChatGPT รุ่นฟรีใส่ไฟล์ได้ 5 ไฟล์ต่อ Project</td>
+</tr>
+<tr>
+<td>สร้างหน้าเว็บ</td>
+<td>ChatGPT (Canvas), Claude (Artifacts), Gemini (Canvas)</td>
+<td>Perplexity รุ่นฟรีไม่มีเครื่องมือสร้างไฟล์หรือแอป</td>
+</tr>
+<tr>
+<td>เชื่อม Google Drive</td>
+<td>Gemini เพิ่มไฟล์จาก Drive ได้โดยตรง</td>
+<td>ถ้า AI ที่ใช้เชื่อม Drive ไม่ได้ ให้อัปโหลดไฟล์หรือคัดลอกข้อความไปวางแทน</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>รุ่นฟรีมีโควตา</strong> เช่น ChatGPT อัปโหลดไฟล์ได้วันละ 3 ไฟล์ ส่วน
+Claude และ Perplexity จำกัดจำนวนครั้งต่อช่วงเวลา
+<strong>อย่าเริ่มคืนสุดท้าย</strong> ถ้าโควตาหมด ให้เปลี่ยนไปใช้ตัวอื่น</li>
+<li><strong>ไม่อัปโหลด PDF จากฐานข้อมูลที่จุฬาฯ บอกรับเข้า AI ทั้งไฟล์</strong>
+เงื่อนไขการใช้ของฐานข้อมูลอาจไม่อนุญาต ให้ใช้บันทึกการอ่านของตนเอง หรือไฟล์ที่เปิดให้ใช้ฟรี
+(open access) แทน</li>
+<li>ไม่อัปโหลดข้อมูลส่วนตัวของผู้อื่นเข้า AI</li>
+<li>ภาพประกอบที่ AI สร้างต้องมีคำบรรยาย เช่น “ภาพประกอบสร้างด้วย ChatGPT
+ตามคำสั่งของผู้จัดทำ”</li>
+</ul>
+<h2 id="วธสรางหนาเวบ">วิธีสร้างหน้าเว็บ</h2>
+<p><strong>ขั้นที่ 1 · ทำไฟล์ข้อมูลหลัก</strong> สร้าง Google Doc หนึ่งไฟล์
+แบ่งหัวข้อตามส่วนที่ 1–6 แล้วกรอกข้อมูลทั้งหมดลงไฟล์นี้ก่อน
+ข้อความในไฟล์นี้คือข้อความที่นิสิตเขียนและตรวจแล้ว</p>
+<p><strong>ขั้นที่ 2 · ให้ AI สร้างหน้าเว็บ</strong> แนบไฟล์ข้อมูลหลัก
+(หรือคัดลอกข้อความไปวาง) แล้วใช้คำสั่งนี้</p>
+<pre class="text"><code>สร้างหน้าเว็บ HTML ไฟล์เดียวจากเอกสารที่แนบ เป็นคลังความรู้การสอน[เครื่องดนตรี]สำหรับ[ผู้เรียนเป้าหมาย]
+
+เงื่อนไข
+1. ใช้เฉพาะข้อมูลในเอกสาร ห้ามเพิ่มชื่อหนังสือ ชื่อบุคคล ปี ลิงก์ หรือข้อเท็จจริงใหม่ ถ้าข้อมูลส่วนใดขาด ให้แสดงข้อความ &quot;ยังไม่มีข้อมูล&quot; ในหน้าเว็บ
+2. ใส่ CSS ไว้ในไฟล์ ไม่ใช้ไลบรารีภายนอก ใช้ฟอนต์ Sarabun จาก Google Fonts ได้
+3. อ่านง่ายบนมือถือ ไม่มีแถบเลื่อนแนวนอน ตัวอักษรอย่างน้อย 16px ตารางบนจอแคบให้เรียงเป็นการ์ด
+4. มีเมนูด้านบนไปยังทุกส่วน เรียงตามนี้: หน้าแรก, ชั้นหนังสือครู, งานวิชาการ, คลิปการสอนของฉัน, คลังวิดีโอการบรรเลง, Virtuoso, บันทึกการใช้ AI, รายการอ้างอิง
+5. รูปทุกรูปแสดงเครดิตและสัญญาอนุญาตใต้ภาพ และมีข้อความ alt
+6. ลิงก์วิดีโอเป็นลิงก์ธรรมดาที่เปิดในแท็บใหม่ ไม่ฝังวิดีโอ
+7. รายการอ้างอิงท้ายหน้าใช้ Chicago author-date เรียงตามนามสกุลผู้แต่ง
+8. ห้ามแก้ถ้อยคำของฉัน ถ้าจำเป็นต้องแก้ ให้บอกท้ายคำตอบว่าแก้ตรงไหนและทำไม พร้อมรายการข้อมูลที่ขาด</code></pre>
+<p><strong>ขั้นที่ 3 · บันทึกเป็นไฟล์</strong> คัดลอกโค้ดทั้งหมด
+วางในโปรแกรมแก้ข้อความ แล้วบันทึกชื่อ <code>index.html</code> แบบ UTF-8</p>
+<ul>
+<li>Mac: ใช้ TextEdit เลือกเมนู Format → Make Plain Text ก่อนวาง</li>
+<li>Windows: ใช้ Notepad</li>
+</ul>
+<p><strong>ขั้นที่ 4 · ตรวจ</strong> เปิด <code>index.html</code>
+ในเบราว์เซอร์ทั้งบนคอมพิวเตอร์และมือถือ กดทุกลิงก์ แล้วเทียบข้อความกับไฟล์ข้อมูลหลัก ถ้า AI
+แก้ข้อมูลหรือเพิ่มข้อมูลเอง ให้แก้กลับ</p>
+<p>ไม่ต้องรู้ HTML มาก่อน ถ้าต้องการแก้หน้าเว็บ สั่ง AI ให้แก้ แล้วบันทึกไฟล์ใหม่</p>
+<h2 id="ตารางทำงาน-1-สปดาห-แนะนำ">ตารางทำงาน 1 สัปดาห์ (แนะนำ)</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>วัน</th>
+<th>งาน</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ศ. 13 พ.ย.</td>
+<td>เลือกเครื่องดนตรีและผู้เรียนเป้าหมาย สร้างโฟลเดอร์ Drive และไฟล์ข้อมูลหลัก</td>
+</tr>
+<tr>
+<td>ส.–อา. 14–15 พ.ย.</td>
+<td>ค้นหนังสือและงานวิชาการจาก CAR รวบรวมวิดีโอและ virtuoso
+กรอกลงไฟล์ข้อมูลหลัก</td>
+</tr>
+<tr>
+<td>จ.–อ. 16–17 พ.ย.</td>
+<td>อ่านบทที่เลือก เขียนบรรณนิทัศน์และสรุป ทำถามตอบ 3 ข้อ</td>
+</tr>
+<tr>
+<td>พ. 18 พ.ย.</td>
+<td>ถ่ายคลิปการสอน และเขียนการ์ดบทเรียน</td>
+</tr>
+<tr>
+<td>พฤ. 19 พ.ย.</td>
+<td>สร้างหน้าเว็บ ตรวจบนมือถือ ตรวจลิงก์</td>
+</tr>
+<tr>
+<td>ศ. 20 พ.ย.</td>
+<td>ตรวจตามรายการด้านล่าง แล้วส่งงาน</td>
+</tr>
+</tbody>
+</table>
+<h2 id="การสงงาน">การส่งงาน</h2>
+<ol type="1">
+<li>สร้างโฟลเดอร์ Google Drive หนึ่งโฟลเดอร์ ใส่ <code>index.html</code>
+ไฟล์ข้อมูลหลัก รูปภาพ ไฟล์คลิปต้นฉบับ และภาพหน้าจอการใช้ AI</li>
+<li>ตั้งสิทธิ์ให้ผู้สอนเปิดดูได้ แล้วลองดาวน์โหลดโฟลเดอร์ แตกไฟล์ และเปิดหน้าแรก
+เพื่อตรวจว่ารูปและลิงก์ยังใช้ได้</li>
+<li>ส่งลิงก์โฟลเดอร์ผ่าน <a
+href="https://forms.gle/tJ7nyaeHxgDbMG7FA">แบบฟอร์มส่งงาน Final
+Project</a></li>
+</ol>
+<h2 id="เกณฑการใหคะแนน-40-คะแนน">เกณฑ์การให้คะแนน (40 คะแนน)</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>เกณฑ์</th>
+<th>ดีเยี่ยม</th>
+<th>ดี</th>
+<th>พอใช้</th>
+<th>ต้องปรับปรุง</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ก. หนังสือและงานวิชาการ</strong> (10)</td>
+<td><strong>10–9</strong> ครบทุกประเภท ตรวจสอบได้ทุกรายการ
+บรรณนิทัศน์และสรุประบุบทหรือหน้าที่ใช้สอนเรื่องใดกับผู้เรียนเป้าหมาย และบอกข้อจำกัด</td>
+<td><strong>8–6</strong> ครบและตรวจสอบได้ สรุปถูกต้อง แต่โยงสู่การสอนแบบกว้าง
+ๆ</td>
+<td><strong>5–3</strong> ขาด 1–2 รายการ หรือขาดประเภทที่กำหนด
+หรือบรรณนิทัศน์เป็นการสรุปทั่วไป</td>
+<td><strong>2–0</strong> ขาดหลายรายการ ตรวจสอบไม่ได้ หรือคัดลอกบทคัดย่อ</td>
+</tr>
+<tr>
+<td><strong>ข. คลิปการสอนและการ์ดบทเรียน</strong> (10)</td>
+<td><strong>10–9</strong> สอนเรื่องเดียว เนื้อหาถูกต้อง การ์ดครบ 5 ช่อง เป้าหมาย
+ลำดับการสอน กิจกรรม และหลักฐานการเรียนรู้สอดคล้องกัน ใช้แนวคิดจากรายวิชาถูกต้อง</td>
+<td><strong>8–6</strong> เนื้อหาถูกต้องและทำตามได้ แต่การ์ดบางช่องไม่สอดคล้องกับคลิป
+หรือใช้แนวคิดจากรายวิชาไม่ชัด</td>
+<td><strong>5–3</strong> เกิน 3 นาที สอนหลายเรื่องจนจับประเด็นไม่ได้
+หรือการ์ดไม่ครบ</td>
+<td><strong>2–0</strong> เนื้อหาผิด หรือไม่มีคลิป</td>
+</tr>
+<tr>
+<td><strong>ค. คลังวิดีโอ</strong> (4)</td>
+<td><strong>4</strong> ครบ 5 คลิป จากช่องทางที่เหมาะสม
+ทุกคลิประบุนาทีและสิ่งที่ควรสังเกตอย่างเจาะจง</td>
+<td><strong>3</strong> ครบ แต่สิ่งที่ควรสังเกตยังกว้าง</td>
+<td><strong>2</strong> ขาด 1–2 คลิป หรือไม่ระบุนาทีหรือสิ่งที่ควรสังเกต</td>
+<td><strong>1–0</strong> ขาดมาก หรือเป็นลิงก์โดยไม่มีคำอธิบาย</td>
+</tr>
+<tr>
+<td><strong>ง. Virtuoso</strong> (4)</td>
+<td><strong>4</strong> ครบ 5 คน หลากหลาย รูปมีเครดิตและสัญญาอนุญาต
+ประวัติมีแหล่งอ้างอิง 2 แหล่ง งานเด่นมีลิงก์และเหตุผล</td>
+<td><strong>3</strong> ครบ แต่เหตุผลที่เลือกงานเด่นยังกว้าง
+หรือมีแหล่งอ้างอิงเพียงแหล่งเดียวในบางคน</td>
+<td><strong>2</strong> ขาด 1–2 คน หรือรูปไม่มีเครดิต
+หรือประวัติไม่มีแหล่งอ้างอิง</td>
+<td><strong>1–0</strong> ขาดมาก หรือใช้รูปที่ AI สร้าง</td>
+</tr>
+<tr>
+<td><strong>จ. การใช้ AI และการตรวจสอบ</strong> (7)</td>
+<td><strong>7–6</strong> ถามตอบครบ 3 ข้อพร้อมผลการตรวจกับแหล่ง มีการเทียบ AI 2
+ตัว และตารางการใช้ AI พร้อมภาพหน้าจอครบทุกคำสั่ง</td>
+<td><strong>5–4</strong> ครบ แต่การตรวจกับแหล่งทำเพียงบางข้อ หรือการเทียบ AI 2
+ตัวยังผิวเผิน</td>
+<td><strong>3–2</strong> ใช้ AI แต่ไม่มีหลักฐานการตรวจ หรือภาพหน้าจอไม่ครบ</td>
+<td><strong>1–0</strong> ไม่มีบันทึกการใช้ AI</td>
+</tr>
+<tr>
+<td><strong>ฉ. หน้าเว็บและการอ้างอิง</strong> (5)</td>
+<td><strong>5</strong> หน้าแรกครบ ไปถึงทุกส่วนจากเมนู อ่านบนมือถือได้
+ลิงก์และรูปเปิดได้ทั้งหมด อ้างอิงแบบ Chicago author-date ครบ</td>
+<td><strong>4</strong> ใช้งานได้ดี มีลิงก์เสียหรือรูปแบบอ้างอิงผิดเล็กน้อย</td>
+<td><strong>3–2</strong> ข้อมูลครบแต่หายาก อ่านบนมือถือลำบาก
+หรืออ้างอิงไม่สม่ำเสมอ</td>
+<td><strong>1–0</strong> เปิดไม่ได้ หรือไม่มีรายการอ้างอิง</td>
+</tr>
+</tbody>
+</table>
+<p><strong>เงื่อนไขเพิ่ม</strong></p>
+<ul>
+<li>รายการที่ไม่มีอยู่จริง เช่น หนังสือหรือบทความที่ AI แต่งขึ้น ไม่นับเป็นรายการ
+และถ้าพบตั้งแต่ 2 รายการ เกณฑ์ ก ได้ไม่เกินระดับพอใช้</li>
+<li>คลิปที่ไม่ได้ตั้งเป็นสาธารณะไม่ถูกหักคะแนน</li>
+<li>ความสวยของหน้าเว็บและการตัดต่อคลิปไม่มีคะแนนแยก</li>
+</ul>
+<h2 id="ถาเรมงานฉบบเดมไปแลว">ถ้าเริ่มงานฉบับเดิมไปแล้ว</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>งานฉบับเดิม</th>
+<th>ใช้ในงานนี้</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>บทเรียนสาธิตและการ์ด 5 ช่อง</td>
+<td>ใช้เป็นส่วนที่ 3 ได้ทันที ถ้าสื่อสาธิตยังไม่ใช่คลิป ให้ถ่ายคลิปไม่เกิน 3
+นาทีจากบทเรียนเดิม</td>
+</tr>
+<tr>
+<td>ส่วนเนื้อหา ฉ (แหล่งฟังและตัวอย่างการบรรเลง)</td>
+<td>ใช้เป็นจุดตั้งต้นของส่วนที่ 4 และ 5</td>
+</tr>
+<tr>
+<td>แหล่งอ้างอิงที่รวบรวมไว้</td>
+<td>ใช้ในส่วนที่ 1 และ 2 ได้ ถ้าเป็นประเภทที่กำหนด</td>
+</tr>
+<tr>
+<td>ภาพหน้าจอการใช้ AI</td>
+<td>ใส่ในตารางการใช้ AI ส่วนที่ 6.2</td>
+</tr>
+<tr>
+<td>ไฟล์ HTML ที่สร้างไว้</td>
+<td>ใช้ต่อได้ เพิ่มส่วนที่ยังขาด</td>
+</tr>
+</tbody>
+</table>
+<h2 id="รายการตรวจกอนสง">รายการตรวจก่อนส่ง</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" />หน้าแรกระบุชื่อผู้จัดทำ เครื่องดนตรี
+และผู้เรียนเป้าหมาย</label></li>
+<li><label><input type="checkbox" />หนังสือ 3–5 เล่ม
+มีหนังสืออ้างอิงเชิงวิชาการและตำราของเครื่องตนอย่างละ 1 เล่มขึ้นไป ทุกเล่มมี ISBN
+และบรรณนิทัศน์</label></li>
+<li><label><input type="checkbox" />งานวิชาการ 2 ชิ้น ภาษาอังกฤษและภาษาไทย มี
+DOI หรือลิงก์ถาวร และภาพหน้าจอหน้ารายการในฐานข้อมูล</label></li>
+<li><label><input type="checkbox" />คลิปการสอน 1 คลิป ไม่เกิน 3 นาที พร้อมการ์ด
+5 ช่อง และไฟล์ต้นฉบับใน Drive</label></li>
+<li><label><input type="checkbox" />วิดีโอการบรรเลง 5 คลิป
+ระบุนาทีและสิ่งที่ควรสังเกต</label></li>
+<li><label><input type="checkbox" />Virtuoso 5 คน มีรูปพร้อมเครดิต
+(หรือลิงก์เว็บไซต์ทางการ) ประวัติพร้อมแหล่งอ้างอิง 2 แหล่ง และงานเด่น</label></li>
+<li><label><input type="checkbox" />ถามตอบ 3 ข้อ อย่างน้อย 1 ข้อเทียบ AI 2 ตัว
+และตารางการใช้ AI พร้อมภาพหน้าจอ</label></li>
+<li><label><input type="checkbox" />เปิดตรวจทุกรายการที่ AI
+แนะนำแล้วว่ามีอยู่จริง</label></li>
+<li><label><input type="checkbox" />รายการอ้างอิงท้ายหน้าใช้ Chicago
+author-date</label></li>
+<li><label><input type="checkbox" />เปิดหน้าเว็บบนมือถือได้
+และลิงก์ใช้งานได้</label></li>
+</ul>
+</body>
+</html>

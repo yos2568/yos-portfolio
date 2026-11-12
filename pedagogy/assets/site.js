@@ -172,13 +172,22 @@ const WEEK_ONE_RESOURCES = [
   { label: "การฟังอย่างเป็นระบบ", href: "https://notebook.google.com/notebook/c3e570a3-8e7c-4be2-a70b-153605f75ef3/artifact/5d5feb7f-b296-4457-9479-c772391de4df?utm_source=nlm_web_share&utm_medium=google_oo&utm_campaign=art_share_1&utm_content=&utm_smc=nlm_web_share_google_oo_art_share_1_" },
 ];
 
+const WEEK_RESOURCES = {
+  1: { label: "แหล่งเรียนรู้สำหรับสัปดาห์ที่ 1", items: WEEK_ONE_RESOURCES },
+  15: {
+    label: "ใบงาน Final Project",
+    items: [{ label: "Final Project 40% · ส่ง 20 พ.ย. 2026", href: new URL("final-project.html", ROOT).href }],
+  },
+};
+
 function renderWeekResourceLinks(weekNumber) {
-  if (weekNumber !== 1) return "";
+  const group = WEEK_RESOURCES[weekNumber];
+  if (!group) return "";
   return `
-    <div class="lesson-resource-links" aria-label="แหล่งเรียนรู้สำหรับสัปดาห์ที่ 1">
-      <p class="lesson-resource-label">แหล่งเรียนรู้สำหรับสัปดาห์ที่ 1</p>
+    <div class="lesson-resource-links" aria-label="${escapeHtml(group.label)}">
+      <p class="lesson-resource-label">${escapeHtml(group.label)}</p>
       <div class="lesson-resource-actions">
-        ${WEEK_ONE_RESOURCES.map((resource) => `
+        ${group.items.map((resource) => `
           <a class="button lesson-resource-link" href="${escapeHtml(resource.href)}" target="_blank" rel="noopener noreferrer">
             ${escapeHtml(resource.label)} <span aria-hidden="true">↗</span>
           </a>`).join("")}
